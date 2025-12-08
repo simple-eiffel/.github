@@ -12,7 +12,8 @@
   ```bash
   git clone https://github.com/simple-eiffel/simple_setup.git
   cd simple_setup
-  simple_setup install --all```
+  simple_setup install --all
+```
 
   Or install individual libraries:
 
