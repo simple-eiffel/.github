@@ -18,6 +18,7 @@
   simple_setup install simple_json simple_csv simple_process
 
   ---
+
   Library Layers
 
   | Layer      | Purpose        | Key Libraries                                                       |
@@ -28,6 +29,7 @@
   | API        | Facades        | simple_foundation_api, simple_service_api, simple_web               |
 
   ---
+
   Featured Libraries
 
   | Library                                       | Description                                     |
@@ -39,6 +41,7 @@
   | https://github.com/simple-eiffel/simple_setup | Package manager & installer                     |
 
   ---
+
   Design Principles
 
   - Design by Contract - Preconditions, postconditions, invariants
@@ -47,6 +50,7 @@
   - AI-Assisted Development - Built with Claude
 
   ---
+
   Resources
 
   - https://www.eiffel.org/downloads
