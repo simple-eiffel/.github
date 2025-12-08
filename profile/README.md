@@ -1,3 +1,8 @@
+  # Simple Eiffel
+
+  **Modern Eiffel libraries for practical software development**
+
+  ---
 
   ## Getting Started
 
@@ -39,7 +44,6 @@
   - Design by Contract - Preconditions, postconditions, invariants
   - Void Safety - Compile-time null protection
   - SCOOP Ready - Concurrency support
-  - 100% Test Coverage - Comprehensive test suites
   - AI-Assisted Development - Built with Claude
 
   ---
@@ -48,7 +52,4 @@
   - https://www.eiffel.org/downloads
   - https://www.eiffel.org/doc/
   - https://ecma-international.org/publications-and-standards/standards/ecma-367/
-
-  ---
-  Create the .github repo, then add this as profile/README.md.
 
