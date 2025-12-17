@@ -24,23 +24,53 @@
 
 ## Quick Start
 
-### Option 1: Package Manager (Recommended)
+### Windows
 
+1. Install [EiffelStudio 25.02](https://www.eiffel.org/downloads)
+2. Set environment variable:
+   ```cmd
+   setx SIMPLE_EIFFEL D:\path\to\simple_eiffel
+   ```
+3. Add to your ECF:
+   ```xml
+   <library name="simple_json" location="$SIMPLE_EIFFEL/simple_json/simple_json.ecf"/>
+   ```
+
+### Linux / WSL2
+
+1. Download and extract EiffelStudio:
+   ```bash
+   wget https://ftp.eiffel.com/pub/download/25.02/Eiffel_25.02_rev_98732-linux-x86-64.tar.bz2
+   tar xjf Eiffel_25.02_rev_98732-linux-x86-64.tar.bz2
+   mv Eiffel_25.02 ~/simple_eiffel/
+   ```
+
+2. Add to `~/.bashrc`:
+   ```bash
+   # Simple Eiffel ecosystem
+   export SIMPLE_EIFFEL=$HOME/simple_eiffel
+
+   # EiffelStudio
+   export ISE_EIFFEL=$HOME/simple_eiffel/Eiffel_25.02
+   export ISE_PLATFORM=linux-x86-64
+   export ISE_LIBRARY=$ISE_EIFFEL
+   export PATH=$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin:$PATH
+   ```
+
+3. Compile and test:
+   ```bash
+   cd $SIMPLE_EIFFEL/simple_json
+   ec -batch -config simple_json.ecf -target simple_json_tests -c_compile
+   ./EIFGENs/simple_json_tests/W_code/simple_json
+   # Result: 214 passed, 0 failed
+   ```
+
+### Package Manager
+
+Use [simple_pkg](https://github.com/simple-eiffel/simple_pkg) to install libraries:
 ```bash
-# Download simple_pkg installer
-# Run: simple_pkg install all
-```
-
-### Option 2: Single Environment Variable
-
-Set one variable to access all libraries:
-```bash
-export SIMPLE_EIFFEL=/path/to/simple_eiffel
-```
-
-Then in your ECF:
-```xml
-<library name="simple_json" location="$SIMPLE_EIFFEL/simple_json/simple_json.ecf"/>
+simple_pkg install simple_json
+simple_pkg install all     # Install entire ecosystem
 ```
 
 ---
@@ -181,6 +211,28 @@ Install **Simple Eiffel LSP** from the VS Code marketplace:
 - Syntax highlighting
 - Go to definition
 - **DbC Heatmap** - Visualize contract coverage across your codebase
+
+---
+
+## Cross-Platform Support
+
+| Platform | Status | Libraries | Notes |
+|----------|--------|-----------|-------|
+| **Windows** | ✅ Full | 71/71 | Primary development platform |
+| **Linux** | ✅ Tested | 60+/71 | Platform-agnostic libraries verified |
+| **WSL2** | ✅ Tested | 60+/71 | See setup guide below |
+| **macOS** | 🔄 Untested | 60+/71 | EiffelStudio available |
+
+### Platform-Specific Libraries (Windows only)
+These libraries use Win32 APIs and require Windows:
+- simple_clipboard, simple_console, simple_gui_designer
+- simple_ipc, simple_mmap, simple_win32_api, simple_registry
+- simple_process (Windows process API)
+
+### Linux Notes
+- Remove `EIFGENs/` directory before compiling (clears Windows artifacts)
+- Set `ISE_LIBRARY=$ISE_EIFFEL` (not `$ISE_EIFFEL/library`)
+- All ECF files use forward slashes for `$SIMPLE_EIFFEL` paths
 
 ---
 
