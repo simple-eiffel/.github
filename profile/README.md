@@ -227,11 +227,11 @@ Install **Simple Eiffel LSP** from the VS Code marketplace:
 
 | Library | Current Status | Linux Solution | Effort |
 |---------|----------------|----------------|--------|
-| simple_docker | Windows pipe | Unix socket `/var/run/docker.sock` | Easy |
-| simple_lsp | Windows paths | Path abstraction | Easy |
-| simple_oracle | Windows paths | Path abstraction | Easy |
-| simple_pkg | Windows env | Environment abstraction | Easy |
-| simple_ipc | Named pipes | Unix domain sockets | Medium |
+| simple_docker | ✅ Done | Unix socket `/var/run/docker.sock` | Done |
+| simple_ipc | ✅ Done | Unix domain sockets implemented | Done |
+| simple_pkg | ✅ Done | ~/.bashrc env var support | Done |
+| simple_oracle | ✅ Done | Documentation updated | Done |
+| simple_lsp | Needs work | Path abstraction | Easy |
 | simple_process | Win32 API | POSIX fork/exec | Medium |
 | simple_mmap | Win32 API | POSIX mmap() | Medium |
 | simple_clipboard | Win32 API | xclip/wl-copy | Medium |
