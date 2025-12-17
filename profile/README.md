@@ -220,14 +220,25 @@ Install **Simple Eiffel LSP** from the VS Code marketplace:
 |----------|--------|-----------|-------|
 | **Windows** | ✅ Full | 71/71 | Primary development platform |
 | **Linux** | ✅ Tested | 60+/71 | Platform-agnostic libraries verified |
-| **WSL2** | ✅ Tested | 60+/71 | See setup guide below |
+| **WSL2** | ✅ Tested | 60+/71 | [Setup guide](https://github.com/simple-eiffel/claude_eiffel_op_docs/blob/main/deployment/WSL2_LINUX_SETUP.md) |
 | **macOS** | 🔄 Untested | 60+/71 | EiffelStudio available |
 
-### Platform-Specific Libraries (Windows only)
-These libraries use Win32 APIs and require Windows:
-- simple_clipboard, simple_console, simple_gui_designer
-- simple_ipc, simple_mmap, simple_win32_api, simple_registry
-- simple_process (Windows process API)
+### Linux Compatibility Roadmap
+
+| Library | Current Status | Linux Solution | Effort |
+|---------|----------------|----------------|--------|
+| simple_docker | Windows pipe | Unix socket `/var/run/docker.sock` | Easy |
+| simple_lsp | Windows paths | Path abstraction | Easy |
+| simple_oracle | Windows paths | Path abstraction | Easy |
+| simple_pkg | Windows env | Environment abstraction | Easy |
+| simple_ipc | Named pipes | Unix domain sockets | Medium |
+| simple_process | Win32 API | POSIX fork/exec | Medium |
+| simple_mmap | Win32 API | POSIX mmap() | Medium |
+| simple_clipboard | Win32 API | xclip/wl-copy | Medium |
+| simple_console | Win32 API | ANSI escapes | Medium |
+| simple_gui_designer | WEL | Windows only | N/A |
+| simple_win32_api | By design | Windows only | N/A |
+| simple_registry | By design | Windows only | N/A |
 
 ### Linux Notes
 - Remove `EIFGENs/` directory before compiling (clears Windows artifacts)
