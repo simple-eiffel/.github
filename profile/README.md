@@ -12,7 +12,7 @@
 
 ---
 
-## What is New (December 2024)
+## What is New (December 2025)
 
 ### Device Libraries (NEW!)
 - **simple_ffmpeg** - FFmpeg multimedia: transcoding, metadata, extraction (CLI + SDK modes)
