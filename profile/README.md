@@ -1,34 +1,38 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/simple-eiffel/claude_eiffel_op_docs/main/artwork/LOGO.png" alt="Simple Eiffel" width="300">
+  <img src="https://raw.githubusercontent.com/simple-eiffel/.github/main/profile/assets/logo.png" alt="Simple Eiffel" width="300">
 </p>
 
 # Simple Eiffel
 
-**78+ production-ready Eiffel libraries for modern software development**
+**85+ production-ready Eiffel libraries for modern software development**
 
-[![Libraries](https://img.shields.io/badge/libraries-78+-blue)](https://github.com/simple-eiffel)
+[![Libraries](https://img.shields.io/badge/libraries-85+-blue)](https://github.com/simple-eiffel)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Eiffel](https://img.shields.io/badge/Eiffel-25.02-orange)](https://www.eiffel.org/)
 
 ---
 
-## What is New (December 2025)
+## What is New (January 2026)
 
-### Device Libraries (NEW!)
+### Speech & AI Libraries
+- **simple_speech** - Speaker diarization, AI semantic correction, SRT/VTT exports with AI metadata
+- **simple_ai_client** - Google AI provider support, OpenAI improvements, environment variable handling
+
+### Document Generation
+- **simple_pdf** - Native music notation PDF rendering module (notes, rests, time signatures)
+- **simple_cairo** - PDF surface support for vector graphics output
+
+### Developer Tools
+- **simple_kb** - AI-enhanced knowledge base with 4-phase RAG (182 libraries, 87K features indexed)
+- **simple_notebook** - Interactive Eiffel REPL with multi-class + multiple inheritance
+- **simple_pkg** - Package manager for the ecosystem
+
+### Device Libraries
 - **simple_ffmpeg** - FFmpeg multimedia: transcoding, metadata, extraction (CLI + SDK modes)
 - **simple_usb** - USB/HID device access, gamepads, Arduino detection
 - **simple_audio** - Real-time audio I/O via WASAPI, PCM buffers
 - **simple_serial** - COM port communication
 - **simple_bluetooth** - Bluetooth SPP communication
-
-### Knowledge & AI
-- **simple_kb** - AI-enhanced knowledge base with 4-phase RAG (182 libraries, 87K features indexed)
-- **simple_rosetta** - 273 Rosetta Code algorithm implementations
-
-### Developer Tools
-- **simple_notebook** - Interactive Eiffel REPL with multi-class + multiple inheritance
-- **simple_gobo** - GitHub Gobo 2024 for SCOOP inline separate parsing
-- **simple_pkg** - Package manager for the ecosystem
 
 ---
 
@@ -54,7 +58,14 @@ simple_pkg install all     # Install entire ecosystem
 
 ## Featured Libraries
 
-### Device Libraries (NEW!)
+### Speech & AI (NEW!)
+
+| Library | Description | Tests |
+|---------|-------------|-------|
+| [simple_speech](https://github.com/simple-eiffel/simple_speech) | Speaker diarization, AI correction | 6/6 |
+| [simple_ai_client](https://github.com/simple-eiffel/simple_ai_client) | OpenAI, Anthropic, Google, Ollama | 12/12 |
+
+### Device Libraries
 
 Hardware and multimedia access with Design by Contract:
 
@@ -122,7 +133,7 @@ kb pattern singleton
 | Library | Description |
 |---------|-------------|
 | [simple_kb](https://github.com/simple-eiffel/simple_kb) | Knowledge base with RAG |
-| [simple_ai_client](https://github.com/simple-eiffel/simple_ai_client) | OpenAI, Anthropic, Ollama |
+| [simple_ai_client](https://github.com/simple-eiffel/simple_ai_client) | OpenAI, Anthropic, Google, Ollama |
 | [simple_rosetta](https://github.com/simple-eiffel/simple_rosetta) | 273 algorithm implementations |
 
 ### Infrastructure
@@ -141,6 +152,12 @@ kb pattern singleton
 | [simple_notebook](https://github.com/simple-eiffel/simple_notebook) | Interactive Eiffel |
 | [simple_testing](https://github.com/simple-eiffel/simple_testing) | Test framework |
 | [simple_eiffel_parser](https://github.com/simple-eiffel/simple_eiffel_parser) | Eiffel source parser |
+
+### Document Generation
+| Library | Description |
+|---------|-------------|
+| [simple_pdf](https://github.com/simple-eiffel/simple_pdf) | PDF generation with music notation |
+| [simple_cairo](https://github.com/simple-eiffel/simple_cairo) | 2D graphics, PDF surfaces |
 
 ---
 
@@ -174,4 +191,4 @@ Issues and pull requests welcome. All code follows Design by Contract.
 
 ---
 
-*78+ libraries. One ecosystem. Modern Eiffel.*
+*85+ libraries. One ecosystem. Modern Eiffel.*
