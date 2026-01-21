@@ -4,35 +4,33 @@
 
 # Simple Eiffel
 
-**85+ production-ready Eiffel libraries for modern software development**
+**114 production-ready Eiffel libraries for modern software development**
 
-[![Libraries](https://img.shields.io/badge/libraries-85+-blue)](https://github.com/simple-eiffel)
+[![Libraries](https://img.shields.io/badge/libraries-114-blue)](https://github.com/simple-eiffel)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Eiffel](https://img.shields.io/badge/Eiffel-25.02-orange)](https://www.eiffel.org/)
 
 ---
 
-## What is New (January 2026)
+## What is New (January 20, 2026)
 
-### Speech & AI Libraries
-- **simple_speech** - Speaker diarization, AI semantic correction, SRT/VTT exports with AI metadata
-- **simple_ai_client** - Google AI provider support, OpenAI improvements, environment variable handling
+### Template Engine
+- **simple_template** - Mustache + Evolicity-style directives, expression evaluator, compiled templates (116 tests)
 
-### Document Generation
-- **simple_pdf** - Native music notation PDF rendering module (notes, rests, time signatures)
-- **simple_cairo** - PDF surface support for vector graphics output
+### Data & Persistence
+- **simple_persist** - v1.0.0 SCOOP-safe object persistence with contracts
+- **simple_zstring** - Unicode string library with Eiffel-Loop integration (182 tests)
+- **simple_container** - LINQ-style collection operations (51 tests)
 
-### Developer Tools
-- **simple_kb** - AI-enhanced knowledge base with 4-phase RAG (182 libraries, 87K features indexed)
-- **simple_notebook** - Interactive Eiffel REPL with multi-class + multiple inheritance
-- **simple_pkg** - Package manager for the ecosystem
+### Serialization & Formats
+- **simple_json** - Added reflection-based serializer (SIMPLE_JSON_SERIALIZER)
 
-### Device Libraries
-- **simple_ffmpeg** - FFmpeg multimedia: transcoding, metadata, extraction (CLI + SDK modes)
-- **simple_usb** - USB/HID device access, gamepads, Arduino detection
-- **simple_audio** - Real-time audio I/O via WASAPI, PCM buffers
-- **simple_serial** - COM port communication
-- **simple_bluetooth** - Bluetooth SPP communication
+### Testing & Development
+- **simple_mock** - HTTP mock server for integration testing (34 tests)
+- **simple_diff** - Myers diff algorithm for text comparison (19 tests)
+
+### Networking
+- **simple_email** - Win32 TLS SMTP client via WinSock/SChannel
 
 ---
 
@@ -58,24 +56,33 @@ simple_pkg install all     # Install entire ecosystem
 
 ## Featured Libraries
 
-### Speech & AI (NEW!)
+### Recently Updated
 
 | Library | Description | Tests |
 |---------|-------------|-------|
-| [simple_speech](https://github.com/simple-eiffel/simple_speech) | Speaker diarization, AI correction | 6/6 |
-| [simple_ai_client](https://github.com/simple-eiffel/simple_ai_client) | OpenAI, Anthropic, Google, Ollama | 12/12 |
+| [simple_template](https://github.com/simple-eiffel/simple_template) | Mustache + Evolicity directives, compiled templates | 116 |
+| [simple_persist](https://github.com/simple-eiffel/simple_persist) | SCOOP-safe object persistence | 24 |
+| [simple_zstring](https://github.com/simple-eiffel/simple_zstring) | Unicode strings (Eiffel-Loop integration) | 182 |
+| [simple_container](https://github.com/simple-eiffel/simple_container) | LINQ-style collection operations | 51 |
+| [simple_mock](https://github.com/simple-eiffel/simple_mock) | HTTP mock server for testing | 34 |
+| [simple_diff](https://github.com/simple-eiffel/simple_diff) | Myers diff algorithm | 19 |
+
+### AI & Speech
+
+| Library | Description | Tests |
+|---------|-------------|-------|
+| [simple_ai_client](https://github.com/simple-eiffel/simple_ai_client) | OpenAI, Anthropic, Google, Ollama | 12 |
+| [simple_speech](https://github.com/simple-eiffel/simple_speech) | Speaker diarization, AI correction | 6 |
 
 ### Device Libraries
 
-Hardware and multimedia access with Design by Contract:
-
 | Library | Description | Tests |
 |---------|-------------|-------|
-| [simple_ffmpeg](https://github.com/simple-eiffel/simple_ffmpeg) | Video/audio transcoding, metadata | 19/19 |
-| [simple_usb](https://github.com/simple-eiffel/simple_usb) | USB/HID devices, gamepads | 29/29 |
-| [simple_audio](https://github.com/simple-eiffel/simple_audio) | Real-time audio I/O (WASAPI) | 17/17 |
-| [simple_serial](https://github.com/simple-eiffel/simple_serial) | COM port communication | 6/6 |
-| [simple_bluetooth](https://github.com/simple-eiffel/simple_bluetooth) | Bluetooth SPP | 11/11 |
+| [simple_ffmpeg](https://github.com/simple-eiffel/simple_ffmpeg) | Video/audio transcoding, metadata | 19 |
+| [simple_usb](https://github.com/simple-eiffel/simple_usb) | USB/HID devices, gamepads | 29 |
+| [simple_audio](https://github.com/simple-eiffel/simple_audio) | Real-time audio I/O (WASAPI) | 17 |
+| [simple_serial](https://github.com/simple-eiffel/simple_serial) | COM port communication | 6 |
+| [simple_bluetooth](https://github.com/simple-eiffel/simple_bluetooth) | Bluetooth SPP | 11 |
 
 ### simple_kb - AI Knowledge Base
 
@@ -191,4 +198,4 @@ Issues and pull requests welcome. All code follows Design by Contract.
 
 ---
 
-*85+ libraries. One ecosystem. Modern Eiffel.*
+*114 libraries. One ecosystem. Modern Eiffel.*
