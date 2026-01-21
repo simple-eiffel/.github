@@ -145,26 +145,40 @@ The Simple Eiffel ecosystem began on **November 11, 2025** with the creation of 
 
 ### Why This Isn't "AI Slop"
 
-**AI slop** = code that looks functional but fails on inspection: missing error handling, null bugs, untested, uncompiled.
+**AI slop** = code that looks functional but fails on inspection: missing error handling, null bugs, untested, uncompiled, abandoned.
 
-Simple Eiffel is the opposite. Here's why:
+The Eiffel compiler will happily compile poorly-designed code with empty contracts. **What prevents slop is the entire methodology:**
 
-| AI Slop Characteristic | Simple Eiffel Reality |
-|------------------------|----------------------|
-| "Code that type-checks but doesn't work" | **Design by Contract** — preconditions, postconditions, and invariants are executable specifications. The compiler and runtime enforce them. |
-| "Hypothetical results" | **Every library compiles and runs tests.** We paste actual `ec.sh` output, not "this should work." |
-| "Null pointer bugs hiding until runtime" | **Void safety** — the compiler eliminates null dereference bugs at compile time. They're structurally impossible. |
-| "AI generates, human abandons" | **~680 hours of real work** — debugging, iterating, hardening. Each library has adversarial tests and stress tests. |
-| "Style without substance" | **Contracts make requirements explicit.** You can't have "unspoken constraints" when preconditions are in the code. |
+**Design Excellence**
+- Proper inheritance hierarchies (not copy-paste)
+- Effective use of generics (type-safe reuse)
+- Command-query separation (predictable behavior)
+- Single-responsibility classes (maintainable code)
 
-**The workflow:**
-1. **Human** writes contracts (specifications)
-2. **AI** implements to satisfy contracts
-3. **Compiler** enforces void safety and types
-4. **Runtime** verifies contracts on every call
-5. **Tests** prove it actually works
+**Contract Excellence**
+- Meaningful preconditions (not just `True`)
+- Verifiable postconditions (not wishful thinking)
+- Class invariants that capture real constraints
+- Contracts that specify *intent*, not just syntax
 
-Eiffel doesn't rely on human discipline to catch slop — **the compiler is the quality gate**. Undisciplined code won't compile.
+**Testing Excellence**
+- Unit tests for happy paths
+- Adversarial tests that try to break contracts
+- Stress tests for edge cases and volume
+- Regression testing multiple times per day
+
+**The Human+AI Workflow**
+1. **Human** designs architecture and writes specifications
+2. **Human** reviews AI output for design quality
+3. **AI** implements to satisfy contracts
+4. **Compiler** enforces void safety and types
+5. **Runtime** verifies contracts on every call
+6. **Tests** prove behavior under real conditions
+7. **Human** iterates until the design is right
+
+**~680 hours** of this cycle — not "generate and ship."
+
+The compiler catches *some* slop (null bugs, type errors). But excellent software requires excellent specifications, excellent design, and relentless testing. That's the real work.
 
 ---
 
