@@ -143,6 +143,29 @@ The Simple Eiffel ecosystem began on **November 11, 2025** with the creation of 
 
 *Built collaboratively by Larry Rix and Claude (Anthropic) — Human+AI development*
 
+### Why This Isn't "AI Slop"
+
+**AI slop** = code that looks functional but fails on inspection: missing error handling, null bugs, untested, uncompiled.
+
+Simple Eiffel is the opposite. Here's why:
+
+| AI Slop Characteristic | Simple Eiffel Reality |
+|------------------------|----------------------|
+| "Code that type-checks but doesn't work" | **Design by Contract** — preconditions, postconditions, and invariants are executable specifications. The compiler and runtime enforce them. |
+| "Hypothetical results" | **Every library compiles and runs tests.** We paste actual `ec.sh` output, not "this should work." |
+| "Null pointer bugs hiding until runtime" | **Void safety** — the compiler eliminates null dereference bugs at compile time. They're structurally impossible. |
+| "AI generates, human abandons" | **~680 hours of real work** — debugging, iterating, hardening. Each library has adversarial tests and stress tests. |
+| "Style without substance" | **Contracts make requirements explicit.** You can't have "unspoken constraints" when preconditions are in the code. |
+
+**The workflow:**
+1. **Human** writes contracts (specifications)
+2. **AI** implements to satisfy contracts
+3. **Compiler** enforces void safety and types
+4. **Runtime** verifies contracts on every call
+5. **Tests** prove it actually works
+
+Eiffel doesn't rely on human discipline to catch slop — **the compiler is the quality gate**. Undisciplined code won't compile.
+
 ---
 
 ## Quick Start
