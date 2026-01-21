@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/simple-eiffel/claude_eiffel_op_docs/main/artwork/LOGO.png" alt="Simple Eiffel" width="300">
+  <img src="https://raw.githubusercontent.com/simple-eiffel/.github/main/profile/assets/logo.png" alt="Simple Eiffel" width="300">
 </p>
 
 # Simple Eiffel
@@ -14,6 +14,8 @@
 
 ## What's New
 
+- **simple_mml** - Mathematical Model Library for Design by Contract specifications (MML_SET, MML_SEQUENCE, MML_BAG, MML_MAP, MML_RELATION)
+- **X03 Contract Assault** - 10 libraries hardened with MML-based model postconditions
 - **QUICK APIs** - 17 libraries now have zero-configuration beginner facades
 - **simple_pkg** - Package manager for the ecosystem
 - **simple_lsp** - VS Code language server with DbC Heatmap visualization
@@ -190,6 +192,7 @@ host := yaml.get_string (config, "database.host")
 ### Developer Tools
 | Library | Description |
 |---------|-------------|
+| [simple_mml](https://github.com/simple-eiffel/simple_mml) | Mathematical Model Library for contracts |
 | [simple_lsp](https://github.com/simple-eiffel/simple_lsp) | VS Code language server |
 | [simple_pkg](https://github.com/simple-eiffel/simple_pkg) | Package manager |
 | [simple_testing](https://github.com/simple-eiffel/simple_testing) | Test framework |
