@@ -4,23 +4,181 @@
 
 # Simple Eiffel
 
-**71 production-ready Eiffel libraries for modern software development**
+**114 production-ready Eiffel libraries for modern software development**
 
-[![Libraries](https://img.shields.io/badge/libraries-71-blue)](https://github.com/simple-eiffel)
+[![Libraries](https://img.shields.io/badge/libraries-114-blue)](https://github.com/simple-eiffel)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Eiffel](https://img.shields.io/badge/Eiffel-25.02-orange)](https://www.eiffel.org/)
 
 ---
 
-## What's New
+## What is New (January 2026) — 22 libraries
 
-- **simple_mml** - Mathematical Model Library for Design by Contract specifications (MML_SET, MML_SEQUENCE, MML_BAG, MML_MAP, MML_RELATION)
-- **X03 Contract Assault** - 10 libraries hardened with MML-based model postconditions
-- **QUICK APIs** - 17 libraries now have zero-configuration beginner facades
-- **simple_pkg** - Package manager for the ecosystem
-- **simple_lsp** - VS Code language server with DbC Heatmap visualization
-- **simple_docker** - Container management from Eiffel
-- **TOON format** - Token-optimized notation reducing LLM costs 30-60%
+### Template & Code Generation
+- **simple_template** *(Dec 6 + Jan)* - Mustache + Evolicity directives, expression evaluator, filters, compiled templates (116 tests)
+- **simple_code** *(Jan 14)* - AI-assisted code generation with Inno Setup builder
+
+### Data & Persistence
+- **simple_persist** *(Jan 20)* - SCOOP-safe object persistence with contracts
+- **simple_zstring** *(Jan 19)* - Unicode strings with Eiffel-Loop integration (182 tests)
+- **simple_container** *(Jan 20)* - LINQ-style collection operations (51 tests)
+- **simple_sorter** *(Jan 20)* - Sorting algorithms integrated into simple_math
+
+### Testing & Development
+- **simple_mock** *(Jan 18)* - HTTP mock server for integration testing (34 tests)
+- **simple_diff** *(Jan 18)* - Myers diff algorithm (19 tests)
+- **simple_reflection** *(Jan 19)* - Runtime introspection (36 tests)
+- **simple_factory** *(Jan 19)* - Object factory patterns (53 tests)
+- **simple_encoding** *(Jan 19)* - Character encoding detection v2.0.0 (83 tests)
+
+### Graphics (Experimental)
+- **simple_vulkan** *(Jan 15)* - Vulkan graphics API bindings
+- **simple_sdf** *(Jan 15)* - Signed distance field rendering
+- **simple_shaderc** *(Jan 15)* - Shader compilation
+
+*January effort: ~220 hours over 20 days (includes work on Vox and other personal Eiffel projects)*
+
+---
+
+## December 2025 — 87 libraries (The Expansion)
+
+### Core Data Formats
+- **simple_csv** *(Dec 5)* - RFC 4180 CSV parsing with streaming
+- **simple_xml** *(Dec 6)* - XML parsing with XPath support
+- **simple_yaml** *(Dec 10)* - YAML 1.2 parser
+- **simple_toml** *(Dec 10)* - TOML configuration files
+- **simple_markdown** *(Dec 6)* - Markdown to HTML conversion
+
+### Web & Networking
+- **simple_http** *(Dec 7)* - HTTP client with Win32 WinHTTP
+- **simple_websocket** *(Dec 6)* - WebSocket client/server
+- **simple_smtp** *(Dec 5)* - Email sending
+- **simple_grpc** *(Dec 13)* - gRPC protocol support
+
+### Security & Auth
+- **simple_jwt** *(Dec 5)* - JWT token creation/validation
+- **simple_encryption** *(Dec 7)* - AES, RSA, hashing via Win32 CNG
+- **simple_hash** *(Dec 5)* - SHA-256, MD5, HMAC
+- **simple_base64** *(Dec 5)* - Base64 encoding/decoding
+- **simple_uuid** *(Dec 5)* - UUID generation
+
+### Data Storage
+- **simple_cache** *(Dec 6)* - LRU cache + Redis client
+- **simple_mq** *(Dec 13)* - Message queue abstraction
+- **simple_registry** *(Dec 7)* - Windows registry access
+
+### Device & Hardware
+- **simple_ffmpeg** *(Dec 27)* - Video/audio transcoding via FFmpeg
+- **simple_usb** *(Dec 27)* - USB/HID device access
+- **simple_audio** *(Dec 27)* - Real-time audio I/O (WASAPI)
+- **simple_serial** *(Dec 26)* - COM port communication
+- **simple_bluetooth** *(Dec 26)* - Bluetooth SPP
+
+### AI & Knowledge
+- **simple_kb** *(Dec 24)* - Knowledge base with RAG search
+- **simple_speech** *(Dec 28)* - Speaker diarization, AI correction
+- **simple_rosetta** *(Dec 22)* - 273 Rosetta Code algorithms
+
+### Developer Tools
+- **simple_oracle** *(Dec 9)* - AI development memory/context system
+- **simple_lsp** *(Dec 9)* - VS Code language server
+- **simple_pkg** *(Dec 14)* - Package manager
+- **simple_notebook** *(Dec 19)* - Interactive Eiffel REPL
+- **simple_testing** *(Dec 7)* - Test framework
+- **simple_eiffel_parser** *(Dec 10)* - Eiffel source parser
+- **simple_cli** *(Dec 7)* - Command-line argument parsing
+- **simple_console** *(Dec 7)* - Terminal colors and formatting
+- **simple_env** *(Dec 7)* - Environment variable management
+- **simple_config** *(Dec 7)* - Configuration file handling
+- **simple_logger** *(Dec 6)* - Structured logging
+
+### Infrastructure
+- **simple_docker** *(Dec 16)* - Docker container management
+- **simple_k8s** *(Dec 17)* - Kubernetes orchestration
+- **simple_scheduler** *(Dec 13)* - Job scheduling, cron
+- **simple_telemetry** *(Dec 13)* - Tracing and metrics
+
+### Document Generation
+- **simple_pdf** *(Dec 7)* - PDF generation with music notation
+- **simple_cairo** *(Dec 29)* - 2D graphics, PDF surfaces
+
+### Utilities
+- **simple_file** *(Dec 6)* - File operations facade
+- **simple_datetime** *(Dec 6)* - Date/time utilities
+- **simple_regex** *(Dec 6)* - Regular expressions
+- **simple_validation** *(Dec 6)* - Input validation
+- **simple_archive** *(Dec 7)* - ZIP/TAR archive handling
+- **simple_ipc** *(Dec 7)* - Inter-process communication
+- **simple_mmap** *(Dec 7)* - Memory-mapped files
+- **simple_fraction** *(Dec 11)* - Rational number arithmetic
+- **simple_decimal** *(Dec 11)* - Decimal number support
+- **simple_math** *(Dec 13)* - Mathematical functions
+- **simple_graph** *(Dec 13)* - Graph data structures
+
+*December effort: ~330 hours over 30 days*
+
+---
+
+## November 2025 — 5 libraries (The Founding)
+
+The Simple Eiffel ecosystem began on **November 11, 2025** with the creation of simple_json.
+
+- **simple_json** *(Nov 11)* - JSON parser with Schema, Patch, Pointer support - **the first library**
+- **simple_web** *(Nov 21)* - Web framework with routing and middleware
+- **simple_sql** *(Nov 22)* - SQLite database with fluent query API
+- **simple_ai_client** *(Nov 23)* - Multi-provider AI client (OpenAI, Anthropic, Google, Ollama)
+
+*November effort: ~130 hours over 12 days*
+
+---
+
+## Ecosystem Totals
+
+| Period | Libraries | Hours | Days |
+|--------|-----------|-------|------|
+| November 2025 | 5 | ~130h | 12 |
+| December 2025 | 87 | ~330h | 30 |
+| January 2026 | 22 | ~220h | 20 |
+| **Total** | **114** | **~680h** | **71** |
+
+*Built collaboratively by Larry Rix and Claude (Anthropic) — Human+AI development*
+
+### Why This Isn't "AI Slop"
+
+**AI slop** = code that looks functional but fails on inspection: missing error handling, null bugs, untested, uncompiled, abandoned.
+
+The Eiffel compiler will happily compile poorly-designed code with empty contracts. **What prevents slop is the entire methodology:**
+
+**Design Excellence**
+- Proper inheritance hierarchies (not copy-paste)
+- Effective use of generics (type-safe reuse)
+- Command-query separation (predictable behavior)
+- Single-responsibility classes (maintainable code)
+
+**Contract Excellence**
+- Meaningful preconditions (not just `True`)
+- Verifiable postconditions (not wishful thinking)
+- Class invariants that capture real constraints
+- Contracts that specify *intent*, not just syntax
+
+**Testing Excellence**
+- Unit tests for happy paths
+- Adversarial tests that try to break contracts
+- Stress tests for edge cases and volume
+- Regression testing multiple times per day
+
+**The Human+AI Workflow**
+1. **Human** designs architecture and writes specifications
+2. **Human** reviews AI output for design quality
+3. **AI** implements to satisfy contracts
+4. **Compiler** enforces void safety and types
+5. **Runtime** verifies contracts on every call
+6. **Tests** prove behavior under real conditions
+7. **Human** iterates until the design is right
+
+**~680 hours** of this cycle — not "generate and ship."
+
+The compiler catches *some* slop (null bugs, type errors). But excellent software requires excellent specifications, excellent design, and relentless testing. That's the real work.
 
 ---
 
@@ -29,47 +187,14 @@
 ### Windows
 
 1. Install [EiffelStudio 25.02](https://www.eiffel.org/downloads)
-2. Set environment variable:
-   ```cmd
-   setx SIMPLE_EIFFEL D:\path\to\simple_eiffel
-   ```
+2. Set environment variable: `setx SIMPLE_EIFFEL D:\path\to\simple_eiffel`
 3. Add to your ECF:
    ```xml
    <library name="simple_json" location="$SIMPLE_EIFFEL/simple_json/simple_json.ecf"/>
    ```
 
-### Linux / WSL2
-
-1. Download and extract EiffelStudio:
-   ```bash
-   wget https://ftp.eiffel.com/pub/download/25.02/Eiffel_25.02_rev_98732-linux-x86-64.tar.bz2
-   tar xjf Eiffel_25.02_rev_98732-linux-x86-64.tar.bz2
-   mv Eiffel_25.02 ~/simple_eiffel/
-   ```
-
-2. Add to `~/.bashrc`:
-   ```bash
-   # Simple Eiffel ecosystem
-   export SIMPLE_EIFFEL=$HOME/simple_eiffel
-
-   # EiffelStudio
-   export ISE_EIFFEL=$HOME/simple_eiffel/Eiffel_25.02
-   export ISE_PLATFORM=linux-x86-64
-   export ISE_LIBRARY=$ISE_EIFFEL
-   export PATH=$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin:$PATH
-   ```
-
-3. Compile and test:
-   ```bash
-   cd $SIMPLE_EIFFEL/simple_json
-   ec -batch -config simple_json.ecf -target simple_json_tests -c_compile
-   ./EIFGENs/simple_json_tests/W_code/simple_json
-   # Result: 214 passed, 0 failed
-   ```
-
 ### Package Manager
 
-Use [simple_pkg](https://github.com/simple-eiffel/simple_pkg) to install libraries:
 ```bash
 simple_pkg install simple_json
 simple_pkg install all     # Install entire ecosystem
@@ -77,184 +202,133 @@ simple_pkg install all     # Install entire ecosystem
 
 ---
 
-## Beginner-Friendly QUICK APIs
+## Featured Libraries
 
-Every QUICK class provides one-liner operations with sensible defaults:
+### Recently Updated
 
-```eiffel
--- JSON
-create json.make
-name := json.get_string (data, "$.users[0].name")
+| Library | Description | Tests |
+|---------|-------------|-------|
+| [simple_template](https://github.com/simple-eiffel/simple_template) | Mustache + Evolicity directives, compiled templates | 116 |
+| [simple_persist](https://github.com/simple-eiffel/simple_persist) | SCOOP-safe object persistence | 24 |
+| [simple_zstring](https://github.com/simple-eiffel/simple_zstring) | Unicode strings (Eiffel-Loop integration) | 182 |
+| [simple_container](https://github.com/simple-eiffel/simple_container) | LINQ-style collection operations | 51 |
+| [simple_mock](https://github.com/simple-eiffel/simple_mock) | HTTP mock server for testing | 34 |
+| [simple_diff](https://github.com/simple-eiffel/simple_diff) | Myers diff algorithm | 19 |
 
--- Validation
-create v.make
-if v.email ("user@example.com") then ...
+### AI & Speech
 
--- Caching with "remember" pattern
-create cache.make
-value := cache.remember ("key", agent compute_expensive_value)
+| Library | Description | Tests |
+|---------|-------------|-------|
+| [simple_ai_client](https://github.com/simple-eiffel/simple_ai_client) | OpenAI, Anthropic, Google, Ollama | 12 |
+| [simple_speech](https://github.com/simple-eiffel/simple_speech) | Speaker diarization, AI correction | 6 |
 
--- Regex with built-in validators
-create rx.make
-if rx.is_email (input) and rx.is_url (link) then ...
+### Device Libraries
 
--- YAML config files
-create yaml.make
-host := yaml.get_string (config, "database.host")
+| Library | Description | Tests |
+|---------|-------------|-------|
+| [simple_ffmpeg](https://github.com/simple-eiffel/simple_ffmpeg) | Video/audio transcoding, metadata | 19 |
+| [simple_usb](https://github.com/simple-eiffel/simple_usb) | USB/HID devices, gamepads | 29 |
+| [simple_audio](https://github.com/simple-eiffel/simple_audio) | Real-time audio I/O (WASAPI) | 17 |
+| [simple_serial](https://github.com/simple-eiffel/simple_serial) | COM port communication | 6 |
+| [simple_bluetooth](https://github.com/simple-eiffel/simple_bluetooth) | Bluetooth SPP | 11 |
+
+### simple_kb - AI Knowledge Base
+
+Searchable Eiffel knowledge base with AI-enhanced RAG:
+- **4,613 classes** and **87,780 features** indexed
+- **31 compiler error codes** with causes and fixes
+- **14 design patterns** with Eiffel idioms
+
+```bash
+kb search "void safety"
+kb error VEVI
+kb pattern singleton
 ```
 
-**Libraries with QUICK APIs:** json, cache, validation, template, csv, xml, yaml, regex, sql, http, smtp, jwt, encryption, mq, ai_client, web, docker
+### simple_rosetta - Algorithm Library
+
+273 Rosetta Code solutions in Eiffel with contracts.
 
 ---
 
 ## Library Categories
 
 ### Data Formats
-| Library | Description | QUICK |
-|---------|-------------|:-----:|
-| [simple_json](https://github.com/simple-eiffel/simple_json) | JSON with Schema validation, Patch, Pointer | Yes |
-| [simple_csv](https://github.com/simple-eiffel/simple_csv) | RFC 4180 CSV parsing | Yes |
-| [simple_xml](https://github.com/simple-eiffel/simple_xml) | XML parsing with XPath | Yes |
-| [simple_yaml](https://github.com/simple-eiffel/simple_yaml) | YAML 1.2 parser | Yes |
-| [simple_toml](https://github.com/simple-eiffel/simple_toml) | TOML configuration | |
-| [simple_markdown](https://github.com/simple-eiffel/simple_markdown) | Markdown to HTML | |
-| [simple_toon](https://github.com/simple-eiffel/simple_toon) | Token-optimized notation for LLMs | |
+| Library | Description |
+|---------|-------------|
+| [simple_json](https://github.com/simple-eiffel/simple_json) | JSON with Schema, Patch, Pointer |
+| [simple_csv](https://github.com/simple-eiffel/simple_csv) | RFC 4180 CSV parsing |
+| [simple_xml](https://github.com/simple-eiffel/simple_xml) | XML parsing with XPath |
+| [simple_yaml](https://github.com/simple-eiffel/simple_yaml) | YAML 1.2 parser |
+| [simple_toml](https://github.com/simple-eiffel/simple_toml) | TOML configuration |
 
-### Web & Networking
-| Library | Description | QUICK |
-|---------|-------------|:-----:|
-| [simple_http](https://github.com/simple-eiffel/simple_http) | HTTP client | Yes |
-| [simple_web](https://github.com/simple-eiffel/simple_web) | Web framework | Yes |
-| [simple_websocket](https://github.com/simple-eiffel/simple_websocket) | WebSocket client/server | |
-| [simple_smtp](https://github.com/simple-eiffel/simple_smtp) | Email sending | Yes |
-| [simple_grpc](https://github.com/simple-eiffel/simple_grpc) | gRPC protocol | |
-| [simple_cors](https://github.com/simple-eiffel/simple_cors) | CORS middleware | |
-| [simple_htmx](https://github.com/simple-eiffel/simple_htmx) | HTMX integration | |
-| [simple_alpine](https://github.com/simple-eiffel/simple_alpine) | Alpine.js integration | |
+### Web and Networking
+| Library | Description |
+|---------|-------------|
+| [simple_http](https://github.com/simple-eiffel/simple_http) | HTTP client |
+| [simple_web](https://github.com/simple-eiffel/simple_web) | Web framework |
+| [simple_websocket](https://github.com/simple-eiffel/simple_websocket) | WebSocket client/server |
+| [simple_smtp](https://github.com/simple-eiffel/simple_smtp) | Email sending |
+| [simple_grpc](https://github.com/simple-eiffel/simple_grpc) | gRPC protocol |
 
-### Security & Auth
-| Library | Description | QUICK |
-|---------|-------------|:-----:|
-| [simple_jwt](https://github.com/simple-eiffel/simple_jwt) | JWT tokens | Yes |
-| [simple_encryption](https://github.com/simple-eiffel/simple_encryption) | AES, RSA, hashing | Yes |
-| [simple_hash](https://github.com/simple-eiffel/simple_hash) | SHA, MD5, HMAC | |
+### Security and Auth
+| Library | Description |
+|---------|-------------|
+| [simple_jwt](https://github.com/simple-eiffel/simple_jwt) | JWT tokens |
+| [simple_encryption](https://github.com/simple-eiffel/simple_encryption) | AES, RSA, hashing |
 
-### Data & Storage
-| Library | Description | QUICK |
-|---------|-------------|:-----:|
-| [simple_sql](https://github.com/simple-eiffel/simple_sql) | SQLite with fluent API | Yes |
-| [simple_cache](https://github.com/simple-eiffel/simple_cache) | LRU cache + Redis | Yes |
-| [simple_mq](https://github.com/simple-eiffel/simple_mq) | Message queues | Yes |
-| [simple_oracle](https://github.com/simple-eiffel/simple_oracle) | Context persistence | |
+### Data and Storage
+| Library | Description |
+|---------|-------------|
+| [simple_sql](https://github.com/simple-eiffel/simple_sql) | SQLite with fluent API |
+| [simple_cache](https://github.com/simple-eiffel/simple_cache) | LRU cache + Redis |
+| [simple_mq](https://github.com/simple-eiffel/simple_mq) | Message queues |
+
+### AI and Knowledge
+| Library | Description |
+|---------|-------------|
+| [simple_kb](https://github.com/simple-eiffel/simple_kb) | Knowledge base with RAG |
+| [simple_ai_client](https://github.com/simple-eiffel/simple_ai_client) | OpenAI, Anthropic, Google, Ollama |
+| [simple_rosetta](https://github.com/simple-eiffel/simple_rosetta) | 273 algorithm implementations |
 
 ### Infrastructure
-| Library | Description | QUICK |
-|---------|-------------|:-----:|
-| [simple_docker](https://github.com/simple-eiffel/simple_docker) | Container management | Yes |
-| [simple_process](https://github.com/simple-eiffel/simple_process) | Process spawning | |
-| [simple_scheduler](https://github.com/simple-eiffel/simple_scheduler) | Job scheduling, cron | |
-| [simple_telemetry](https://github.com/simple-eiffel/simple_telemetry) | Tracing, metrics | |
-| [simple_ipc](https://github.com/simple-eiffel/simple_ipc) | Inter-process communication | |
-
-### AI & Machine Learning
-| Library | Description | QUICK |
-|---------|-------------|:-----:|
-| [simple_ai_client](https://github.com/simple-eiffel/simple_ai_client) | OpenAI, Anthropic, Ollama | Yes |
-
-### Utilities
 | Library | Description |
 |---------|-------------|
-| [simple_uuid](https://github.com/simple-eiffel/simple_uuid) | UUID v4 generation |
-| [simple_base64](https://github.com/simple-eiffel/simple_base64) | Base64 encoding |
-| [simple_datetime](https://github.com/simple-eiffel/simple_datetime) | Date/time handling |
-| [simple_decimal](https://github.com/simple-eiffel/simple_decimal) | Arbitrary precision |
-| [simple_fraction](https://github.com/simple-eiffel/simple_fraction) | Rational numbers |
-| [simple_regex](https://github.com/simple-eiffel/simple_regex) | Pattern matching |
-| [simple_validation](https://github.com/simple-eiffel/simple_validation) | Input validation |
-| [simple_template](https://github.com/simple-eiffel/simple_template) | Mustache templates |
-| [simple_logger](https://github.com/simple-eiffel/simple_logger) | Structured logging |
-| [simple_i18n](https://github.com/simple-eiffel/simple_i18n) | Internationalization |
-| [simple_cli](https://github.com/simple-eiffel/simple_cli) | CLI argument parsing |
-| [simple_config](https://github.com/simple-eiffel/simple_config) | Configuration management |
-| [simple_rate_limiter](https://github.com/simple-eiffel/simple_rate_limiter) | Rate limiting |
-
-### Platform & System
-| Library | Description |
-|---------|-------------|
-| [simple_env](https://github.com/simple-eiffel/simple_env) | Environment variables |
-| [simple_file](https://github.com/simple-eiffel/simple_file) | File operations |
-| [simple_console](https://github.com/simple-eiffel/simple_console) | Terminal I/O |
-| [simple_clipboard](https://github.com/simple-eiffel/simple_clipboard) | Clipboard access |
-| [simple_registry](https://github.com/simple-eiffel/simple_registry) | Windows registry |
-| [simple_win32_api](https://github.com/simple-eiffel/simple_win32_api) | Win32 bindings |
-| [simple_platform_api](https://github.com/simple-eiffel/simple_platform_api) | Cross-platform facade |
+| [simple_docker](https://github.com/simple-eiffel/simple_docker) | Container management |
+| [simple_k8s](https://github.com/simple-eiffel/simple_k8s) | Kubernetes orchestration |
+| [simple_scheduler](https://github.com/simple-eiffel/simple_scheduler) | Job scheduling, cron |
+| [simple_telemetry](https://github.com/simple-eiffel/simple_telemetry) | Tracing, metrics |
 
 ### Developer Tools
 | Library | Description |
 |---------|-------------|
-| [simple_mml](https://github.com/simple-eiffel/simple_mml) | Mathematical Model Library for contracts |
 | [simple_lsp](https://github.com/simple-eiffel/simple_lsp) | VS Code language server |
 | [simple_pkg](https://github.com/simple-eiffel/simple_pkg) | Package manager |
+| [simple_notebook](https://github.com/simple-eiffel/simple_notebook) | Interactive Eiffel |
 | [simple_testing](https://github.com/simple-eiffel/simple_testing) | Test framework |
 | [simple_eiffel_parser](https://github.com/simple-eiffel/simple_eiffel_parser) | Eiffel source parser |
-| [simple_ucf](https://github.com/simple-eiffel/simple_ucf) | Universe Configuration |
 
-### API Facades
+### Document Generation
 | Library | Description |
 |---------|-------------|
-| [simple_foundation_api](https://github.com/simple-eiffel/simple_foundation_api) | Core utilities bundle |
-| [simple_service_api](https://github.com/simple-eiffel/simple_service_api) | Services bundle |
-| [simple_app_api](https://github.com/simple-eiffel/simple_app_api) | Full stack bundle |
+| [simple_pdf](https://github.com/simple-eiffel/simple_pdf) | PDF generation with music notation |
+| [simple_cairo](https://github.com/simple-eiffel/simple_cairo) | 2D graphics, PDF surfaces |
 
 ---
 
 ## VS Code Integration
 
 Install **Simple Eiffel LSP** from the VS Code marketplace:
-- Syntax highlighting
-- Go to definition
-- **DbC Heatmap** - Visualize contract coverage across your codebase
-
----
-
-## Cross-Platform Support
-
-| Platform | Status | Libraries | Notes |
-|----------|--------|-----------|-------|
-| **Windows** | ✅ Full | 71/71 | Primary development platform |
-| **Linux** | ✅ Tested | 60+/71 | Platform-agnostic libraries verified |
-| **WSL2** | ✅ Tested | 60+/71 | [Setup guide](https://github.com/simple-eiffel/claude_eiffel_op_docs/blob/main/deployment/WSL2_LINUX_SETUP.md) |
-| **macOS** | 🔄 Untested | 60+/71 | EiffelStudio available |
-
-### Linux Compatibility Roadmap
-
-| Library | Current Status | Linux Solution | Effort |
-|---------|----------------|----------------|--------|
-| simple_docker | ✅ Done | Unix socket `/var/run/docker.sock` | Done |
-| simple_ipc | ✅ Done | Unix domain sockets implemented | Done |
-| simple_pkg | ✅ Done | ~/.bashrc env var support | Done |
-| simple_oracle | ✅ Done | Documentation updated | Done |
-| simple_lsp | Needs work | Path abstraction | Easy |
-| simple_process | Win32 API | POSIX fork/exec | Medium |
-| simple_mmap | Win32 API | POSIX mmap() | Medium |
-| simple_clipboard | Win32 API | xclip/wl-copy | Medium |
-| simple_console | Win32 API | ANSI escapes | Medium |
-| simple_gui_designer | WEL | Windows only | N/A |
-| simple_win32_api | By design | Windows only | N/A |
-| simple_registry | By design | Windows only | N/A |
-
-### Linux Notes
-- Remove `EIFGENs/` directory before compiling (clears Windows artifacts)
-- Set `ISE_LIBRARY=$ISE_EIFFEL` (not `$ISE_EIFFEL/library`)
-- All ECF files use forward slashes for `$SIMPLE_EIFFEL` paths
+- Syntax highlighting and Go to definition
+- **DbC Heatmap** - Visualize contract coverage
 
 ---
 
 ## Design Principles
 
-- **Design by Contract** - Preconditions, postconditions, invariants on every feature
+- **Design by Contract** - Preconditions, postconditions, invariants
 - **Void Safety** - Compile-time null protection
-- **SCOOP Compatible** - All libraries work with Eiffel's concurrency model
+- **SCOOP Compatible** - All libraries work with Eiffel concurrency
 - **Human+AI Development** - Built collaboratively with Claude (Anthropic)
 
 ---
@@ -268,8 +342,8 @@ Install **Simple Eiffel LSP** from the VS Code marketplace:
 
 ## Contributing
 
-Issues and pull requests welcome. All code follows Eiffel's Design by Contract principles.
+Issues and pull requests welcome. All code follows Design by Contract.
 
 ---
 
-*71 libraries. One ecosystem. Modern Eiffel.*
+*114 libraries. One ecosystem. Modern Eiffel.*
