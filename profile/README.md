@@ -36,6 +36,8 @@
 - **simple_sdf** *(Jan 15, ~4h)* - Signed distance field rendering
 - **simple_shaderc** *(Jan 15, ~1h)* - Shader compilation
 
+*January effort: ~57 hours over 20 days*
+
 ---
 
 ## December 2025 — 87 libraries (The Expansion)
@@ -113,6 +115,8 @@
 - **simple_math** *(Dec 7, ~10h)* - Mathematical functions
 - **simple_graph** *(Dec 7, ~8h)* - Graph data structures
 
+*December effort: ~611 hours over 30 days*
+
 ---
 
 ## November 2025 — 5 libraries (The Founding)
@@ -124,7 +128,20 @@ The Simple Eiffel ecosystem began on **November 11, 2025** with the creation of 
 - **simple_sql** *(Nov 22, ~31h)* - SQLite database with fluent query API
 - **simple_ai_client** *(Nov 23, ~13h)* - Multi-provider AI client (OpenAI, Anthropic, Google, Ollama)
 
-*Total founding effort: ~106 hours over 12 days*
+*November effort: ~106 hours over 12 days*
+
+---
+
+## Ecosystem Totals
+
+| Period | Libraries | Hours | Days |
+|--------|-----------|-------|------|
+| November 2025 | 5 | ~106h | 12 |
+| December 2025 | 87 | ~611h | 30 |
+| January 2026 | 22 | ~57h | 20 |
+| **Total** | **114** | **~774h** | **71** |
+
+*Built collaboratively by Larry Rix and Claude (Anthropic) — Human+AI development*
 
 ---
 
