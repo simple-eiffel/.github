@@ -12,38 +12,119 @@
 
 ---
 
-## What is New (January 2026)
+## What is New (January 2026) — 22 libraries
 
 ### Template & Code Generation
-- **simple_template** - Mustache + Evolicity-style directives, expression evaluator (`+`,`-`,`*`,`/`,`%`), filters (`upper`, `lower`, `truncate`), compiled templates (116 tests)
-- **simple_code** - AI-assisted code generation tool with Inno Setup builder
+- **simple_template** *(Dec 6 + Jan, ~13h)* - Mustache + Evolicity directives, expression evaluator, filters, compiled templates (116 tests)
+- **simple_code** *(Jan 17, ~12h)* - AI-assisted code generation with Inno Setup builder
 
 ### Data & Persistence
-- **simple_persist** - v1.0.0 SCOOP-safe object persistence with contracts
-- **simple_zstring** - Unicode string library with Eiffel-Loop integration (182 tests)
-- **simple_container** - v1.0.0 LINQ-style collection operations (51 tests)
-- **simple_sorter** - Sorting algorithms integrated into simple_math (46 tests)
-
-### Serialization & Formats
-- **simple_json** - Reflection-based serializer (SIMPLE_JSON_SERIALIZER)
-- **simple_xml** - Refactored with SIMPLE_ZSTRING integration
-- **simple_http** - Refactored with SIMPLE_ZSTRING URL encoding
+- **simple_persist** *(Jan 20, ~4h)* - SCOOP-safe object persistence with contracts
+- **simple_zstring** *(Jan 19, ~3h)* - Unicode strings with Eiffel-Loop integration (182 tests)
+- **simple_container** *(Jan 20, ~4h)* - LINQ-style collection operations (51 tests)
+- **simple_sorter** *(Jan 20, ~2h)* - Sorting algorithms integrated into simple_math
 
 ### Testing & Development
-- **simple_mock** - HTTP mock server for integration testing (34 tests)
-- **simple_diff** - Myers diff algorithm for text comparison (19 tests)
-- **simple_reflection** - v1.0.0 runtime introspection (36 tests)
-- **simple_factory** - Object factory patterns (53 tests)
-
-### Encoding & Infrastructure
-- **simple_encoding** - v2.0.0 character encoding detection (83 tests)
-- **simple_email** - Win32 TLS SMTP via WinSock/SChannel
-- **simple_console** - Terminal formatting and colors
+- **simple_mock** *(Jan 20, ~2h)* - HTTP mock server for integration testing (34 tests)
+- **simple_diff** *(Jan 20, ~2h)* - Myers diff algorithm (19 tests)
+- **simple_reflection** *(Jan 19, ~2h)* - Runtime introspection (36 tests)
+- **simple_factory** *(Jan 19, ~2h)* - Object factory patterns (53 tests)
+- **simple_encoding** *(Jan 19, ~2h)* - Character encoding detection v2.0.0 (83 tests)
 
 ### Graphics (Experimental)
-- **simple_vulkan** - Vulkan graphics API bindings
-- **simple_sdf** - Signed distance field rendering
-- **simple_shaderc** - Shader compilation
+- **simple_vulkan** *(Jan 15, ~2h)* - Vulkan graphics API bindings
+- **simple_sdf** *(Jan 15, ~4h)* - Signed distance field rendering
+- **simple_shaderc** *(Jan 15, ~1h)* - Shader compilation
+
+---
+
+## December 2025 — 87 libraries (The Expansion)
+
+### Core Data Formats
+- **simple_csv** *(Dec 5, ~12h)* - RFC 4180 CSV parsing with streaming
+- **simple_xml** *(Dec 6, ~11h)* - XML parsing with XPath support
+- **simple_yaml** *(Dec 7, ~10h)* - YAML 1.2 parser
+- **simple_toml** *(Dec 7, ~10h)* - TOML configuration files
+- **simple_markdown** *(Dec 6, ~11h)* - Markdown to HTML conversion
+
+### Web & Networking
+- **simple_http** *(Dec 7, ~11h)* - HTTP client with Win32 WinHTTP
+- **simple_websocket** *(Dec 6, ~10h)* - WebSocket client/server
+- **simple_smtp** *(Dec 5, ~13h)* - Email sending
+- **simple_grpc** *(Dec 7, ~8h)* - gRPC protocol support
+
+### Security & Auth
+- **simple_jwt** *(Dec 5, ~13h)* - JWT token creation/validation
+- **simple_encryption** *(Dec 7, ~9h)* - AES, RSA, hashing via Win32 CNG
+- **simple_hash** *(Dec 5, ~11h)* - SHA-256, MD5, HMAC
+- **simple_base64** *(Dec 5, ~12h)* - Base64 encoding/decoding
+- **simple_uuid** *(Dec 5, ~12h)* - UUID generation
+
+### Data Storage
+- **simple_cache** *(Dec 6, ~12h)* - LRU cache + Redis client
+- **simple_mq** *(Dec 7, ~5h)* - Message queue abstraction
+- **simple_registry** *(Dec 7, ~8h)* - Windows registry access
+
+### Device & Hardware
+- **simple_ffmpeg** *(Dec 7, ~12h)* - Video/audio transcoding via FFmpeg
+- **simple_usb** *(Dec 7, ~6h)* - USB/HID device access
+- **simple_audio** *(Dec 7, ~8h)* - Real-time audio I/O (WASAPI)
+- **simple_serial** *(Dec 7, ~2h)* - COM port communication
+- **simple_bluetooth** *(Dec 7, ~2h)* - Bluetooth SPP
+
+### AI & Knowledge
+- **simple_kb** *(Dec 7, ~5h)* - Knowledge base with RAG search
+- **simple_speech** *(Dec 7, ~6h)* - Speaker diarization, AI correction
+- **simple_rosetta** *(Dec 7, ~8h)* - 273 Rosetta Code algorithms
+
+### Developer Tools
+- **simple_oracle** *(Dec 7, ~14h)* - AI development memory/context system
+- **simple_lsp** *(Dec 7, ~10h)* - VS Code language server
+- **simple_pkg** *(Dec 7, ~8h)* - Package manager
+- **simple_notebook** *(Dec 7, ~10h)* - Interactive Eiffel REPL
+- **simple_testing** *(Dec 7, ~8h)* - Test framework
+- **simple_eiffel_parser** *(Dec 7, ~10h)* - Eiffel source parser
+- **simple_cli** *(Dec 7, ~10h)* - Command-line argument parsing
+- **simple_console** *(Dec 7, ~12h)* - Terminal colors and formatting
+- **simple_env** *(Dec 7, ~16h)* - Environment variable management
+- **simple_config** *(Dec 7, ~10h)* - Configuration file handling
+- **simple_logger** *(Dec 6, ~10h)* - Structured logging
+
+### Infrastructure
+- **simple_docker** *(Dec 7, ~7h)* - Docker container management
+- **simple_k8s** *(Dec 7, ~12h)* - Kubernetes orchestration
+- **simple_scheduler** *(Dec 7, ~6h)* - Job scheduling, cron
+- **simple_telemetry** *(Dec 7, ~6h)* - Tracing and metrics
+
+### Document Generation
+- **simple_pdf** *(Dec 7, ~15h)* - PDF generation with music notation
+- **simple_cairo** *(Dec 7, ~10h)* - 2D graphics, PDF surfaces
+
+### Utilities
+- **simple_file** *(Dec 6, ~9h)* - File operations facade
+- **simple_datetime** *(Dec 6, ~9h)* - Date/time utilities
+- **simple_regex** *(Dec 6, ~12h)* - Regular expressions
+- **simple_validation** *(Dec 6, ~11h)* - Input validation
+- **simple_archive** *(Dec 7, ~9h)* - ZIP/TAR archive handling
+- **simple_ipc** *(Dec 7, ~10h)* - Inter-process communication
+- **simple_mmap** *(Dec 7, ~11h)* - Memory-mapped files
+- **simple_fraction** *(Dec 7, ~8h)* - Rational number arithmetic
+- **simple_decimal** *(Dec 7, ~8h)* - Decimal number support
+- **simple_math** *(Dec 7, ~10h)* - Mathematical functions
+- **simple_graph** *(Dec 7, ~8h)* - Graph data structures
+
+---
+
+## November 2025 — 5 libraries (The Founding)
+
+The Simple Eiffel ecosystem began on **November 11, 2025** with the creation of simple_json.
+
+- **simple_json** *(Nov 11, ~43h)* - JSON parser with Schema, Patch, Pointer support - **the first library**
+- **simple_web** *(Nov 21, ~19h)* - Web framework with routing and middleware
+- **simple_sql** *(Nov 22, ~31h)* - SQLite database with fluent query API
+- **simple_ai_client** *(Nov 23, ~13h)* - Multi-provider AI client (OpenAI, Anthropic, Google, Ollama)
+
+*Total founding effort: ~106 hours over 12 days*
 
 ---
 
