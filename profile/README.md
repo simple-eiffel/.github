@@ -12,25 +12,38 @@
 
 ---
 
-## What is New (January 20, 2026)
+## What is New (January 2026)
 
-### Template Engine
-- **simple_template** - Mustache + Evolicity-style directives, expression evaluator, compiled templates (116 tests)
+### Template & Code Generation
+- **simple_template** - Mustache + Evolicity-style directives, expression evaluator (`+`,`-`,`*`,`/`,`%`), filters (`upper`, `lower`, `truncate`), compiled templates (116 tests)
+- **simple_code** - AI-assisted code generation tool with Inno Setup builder
 
 ### Data & Persistence
 - **simple_persist** - v1.0.0 SCOOP-safe object persistence with contracts
 - **simple_zstring** - Unicode string library with Eiffel-Loop integration (182 tests)
-- **simple_container** - LINQ-style collection operations (51 tests)
+- **simple_container** - v1.0.0 LINQ-style collection operations (51 tests)
+- **simple_sorter** - Sorting algorithms integrated into simple_math (46 tests)
 
 ### Serialization & Formats
-- **simple_json** - Added reflection-based serializer (SIMPLE_JSON_SERIALIZER)
+- **simple_json** - Reflection-based serializer (SIMPLE_JSON_SERIALIZER)
+- **simple_xml** - Refactored with SIMPLE_ZSTRING integration
+- **simple_http** - Refactored with SIMPLE_ZSTRING URL encoding
 
 ### Testing & Development
 - **simple_mock** - HTTP mock server for integration testing (34 tests)
 - **simple_diff** - Myers diff algorithm for text comparison (19 tests)
+- **simple_reflection** - v1.0.0 runtime introspection (36 tests)
+- **simple_factory** - Object factory patterns (53 tests)
 
-### Networking
-- **simple_email** - Win32 TLS SMTP client via WinSock/SChannel
+### Encoding & Infrastructure
+- **simple_encoding** - v2.0.0 character encoding detection (83 tests)
+- **simple_email** - Win32 TLS SMTP via WinSock/SChannel
+- **simple_console** - Terminal formatting and colors
+
+### Graphics (Experimental)
+- **simple_vulkan** - Vulkan graphics API bindings
+- **simple_sdf** - Signed distance field rendering
+- **simple_shaderc** - Shader compilation
 
 ---
 
