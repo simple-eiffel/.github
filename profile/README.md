@@ -25,11 +25,15 @@
 - **simple_sorter** *(Jan 20)* - Sorting algorithms integrated into simple_math
 
 ### Testing & Development
+- **simple_mml** *(Jan 21)* - Mathematical Model Library for contracts (26 tests)
 - **simple_mock** *(Jan 18)* - HTTP mock server for integration testing (34 tests)
 - **simple_diff** *(Jan 18)* - Myers diff algorithm (19 tests)
 - **simple_reflection** *(Jan 19)* - Runtime introspection (36 tests)
 - **simple_factory** *(Jan 19)* - Object factory patterns (53 tests)
 - **simple_encoding** *(Jan 19)* - Character encoding detection v2.0.0 (83 tests)
+
+### Contract Hardening (X03)
+- **10 libraries** updated with MML-based model postconditions (simple_container, simple_sorter, simple_regex, simple_process, simple_config, simple_xml, simple_csv, simple_file, simple_hash, simple_math)
 
 ### Graphics (Experimental)
 - **simple_vulkan** *(Jan 15)* - Vulkan graphics API bindings
@@ -302,6 +306,7 @@ kb pattern singleton
 ### Developer Tools
 | Library | Description |
 |---------|-------------|
+| [simple_mml](https://github.com/simple-eiffel/simple_mml) | Mathematical Model Library for contracts |
 | [simple_lsp](https://github.com/simple-eiffel/simple_lsp) | VS Code language server |
 | [simple_pkg](https://github.com/simple-eiffel/simple_pkg) | Package manager |
 | [simple_notebook](https://github.com/simple-eiffel/simple_notebook) | Interactive Eiffel |
