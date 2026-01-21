@@ -36,7 +36,7 @@
 - **simple_sdf** *(Jan 15)* - Signed distance field rendering
 - **simple_shaderc** *(Jan 15)* - Shader compilation
 
-*January effort: ~220 hours over 20 days*
+*January effort: ~220 hours over 20 days (includes work on Vox and other personal Eiffel projects)*
 
 ---
 
