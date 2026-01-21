@@ -33,7 +33,7 @@
 - **simple_encoding** *(Jan 19)* - Character encoding detection v2.0.0 (83 tests)
 
 ### Contract Hardening (X03)
-- **10 libraries** updated with MML-based model postconditions (simple_container, simple_sorter, simple_regex, simple_process, simple_config, simple_xml, simple_csv, simple_file, simple_hash, simple_math)
+- **25 libraries** updated with MML integration and model postconditions
 
 ### Graphics (Experimental)
 - **simple_vulkan** *(Jan 15)* - Vulkan graphics API bindings
