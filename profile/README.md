@@ -32,6 +32,9 @@
 - **simple_factory** *(Jan 19)* - Object factory patterns (53 tests)
 - **simple_encoding** *(Jan 19)* - Character encoding detection v2.0.0 (83 tests)
 
+### Contract Hardening (X03)
+- **25 libraries** updated with MML integration and model postconditions
+
 ### Graphics (Experimental)
 - **simple_vulkan** *(Jan 15)* - Vulkan graphics API bindings
 - **simple_sdf** *(Jan 15)* - Signed distance field rendering
@@ -303,6 +306,7 @@ kb pattern singleton
 ### Developer Tools
 | Library | Description |
 |---------|-------------|
+| [simple_mml](https://github.com/simple-eiffel/simple_mml) | Mathematical Model Library for contracts |
 | [simple_lsp](https://github.com/simple-eiffel/simple_lsp) | VS Code language server |
 | [simple_pkg](https://github.com/simple-eiffel/simple_pkg) | Package manager |
 | [simple_notebook](https://github.com/simple-eiffel/simple_notebook) | Interactive Eiffel |
