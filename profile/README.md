@@ -4,15 +4,15 @@
 
 # Simple Eiffel
 
-**114 production-ready Eiffel libraries for modern software development**
+**121 production-ready Eiffel libraries for modern software development**
 
-[![Libraries](https://img.shields.io/badge/libraries-114-blue)](https://github.com/simple-eiffel)
+[![Libraries](https://img.shields.io/badge/libraries-121-blue)](https://github.com/simple-eiffel)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Eiffel](https://img.shields.io/badge/Eiffel-25.02-orange)](https://www.eiffel.org/)
 
 ---
 
-## What is New (January 2026) — 22 libraries
+## What's New (January 2026) — 29 libraries
 
 ### Template & Code Generation
 - **simple_template** *(Dec 6 + Jan)* - Mustache + Evolicity directives, expression evaluator, filters, compiled templates (116 tests)
@@ -25,6 +25,7 @@
 - **simple_sorter** *(Jan 20)* - Sorting algorithms integrated into simple_math
 
 ### Testing & Development
+- **simple_mml** *(Jan 21)* - Mathematical Model Library for contracts (26 tests)
 - **simple_mock** *(Jan 18)* - HTTP mock server for integration testing (34 tests)
 - **simple_diff** *(Jan 18)* - Myers diff algorithm (19 tests)
 - **simple_reflection** *(Jan 19)* - Runtime introspection (36 tests)
@@ -138,8 +139,8 @@ The Simple Eiffel ecosystem began on **November 11, 2025** with the creation of 
 |--------|-----------|-------|------|
 | November 2025 | 5 | ~130h | 12 |
 | December 2025 | 87 | ~330h | 30 |
-| January 2026 | 22 | ~220h | 20 |
-| **Total** | **114** | **~680h** | **71** |
+| January 2026 | 29 | ~220h | 20 |
+| **Total** | **121** | **~680h** | **71** |
 
 *Built collaboratively by Larry Rix and Claude (Anthropic) — Human+AI development*
 
@@ -346,4 +347,4 @@ Issues and pull requests welcome. All code follows Design by Contract.
 
 ---
 
-*114 libraries. One ecosystem. Modern Eiffel.*
+*121 libraries. One ecosystem. Modern Eiffel.*
