@@ -186,6 +186,32 @@ The compiler catches *some* slop (null bugs, type errors). But excellent softwar
 
 ---
 
+## Built With Simple Eiffel — Applications in Practice
+
+The libraries aren't just a catalog — they compose. These are real applications built
+*on top of* the ecosystem, each one wiring several libraries together to do a job.
+
+### [simple_reel](https://github.com/simple-eiffel/simple_reel) — chapter-to-video render orchestrator
+
+A console app that turns a markdown source into a captioned film whose visuals are
+timed to the narration. It drives ComfyUI (Wan 2.2 i2v + SDXL stills), ffmpeg,
+edge-tts, resvg, Manim and Blender from a single storyboard — and it's assembled
+almost entirely from ecosystem parts:
+
+| Library | Job in the pipeline |
+|---------|---------------------|
+| [simple_process](https://github.com/simple-eiffel/simple_process) | launch and manage ffmpeg / ComfyUI / helper processes |
+| [simple_http](https://github.com/simple-eiffel/simple_http) | talk to the ComfyUI render API |
+| [simple_json](https://github.com/simple-eiffel/simple_json) | read storyboards, timing files and render graphs |
+| [simple_file](https://github.com/simple-eiffel/simple_file) | manage stills, clips and output artifacts |
+| [simple_datetime](https://github.com/simple-eiffel/simple_datetime) | timing and scheduling of the render passes |
+| [simple_logger](https://github.com/simple-eiffel/simple_logger) | structured run logs |
+
+*A worked example that the "121 libraries" number doesn't capture: simple_reel is an
+**application**, not a counted library — proof the pieces fit together in anger.*
+
+---
+
 ## Quick Start
 
 ### Windows
