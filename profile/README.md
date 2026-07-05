@@ -207,7 +207,7 @@ almost entirely from ecosystem parts:
 | [simple_datetime](https://github.com/simple-eiffel/simple_datetime) | timing and scheduling of the render passes |
 | [simple_logger](https://github.com/simple-eiffel/simple_logger) | structured run logs |
 
-**See it in action:** [NOUS — Finding the Mind of Christ](https://www.youtube.com/watch?v=pXIE6rA3x2Q&list=PLc044q4oRJJw&pp=sAgC) — an 18-film narrated series (intro + 17 chapters, two movements) produced end-to-end by simple_reel.
+**See it in action:** [NOUS — Finding the Mind of Christ](https://www.youtube.com/playlist?list=PLc044q4oRJJw) — an 18-film narrated series (intro + 17 chapters, two movements) produced end-to-end by simple_reel.
 
 *A worked example that the "121 libraries" number doesn't capture: simple_reel is an
 **application**, not a counted library — proof the pieces fit together in anger.*
