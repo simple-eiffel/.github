@@ -28,7 +28,7 @@
 
 **Controls in simple_gui 0.2:** windows, menus and context menus, labels, buttons, check boxes, text fields and areas, lists, sortable multi-select tables, trees, tabs, splitters, grids and stacks, a Cairo canvas at the screen's scale, file and message dialogs. Light and dark follow the system, any window can turn right to left, every control is accessible, and a test driver clicks, types and takes pictures as a user would. GUI work runs on SCOOP: workers never call into the GUI, they post to its mailbox.
 
-**A Mac application:** the calculator builds into "Eiffel Graphing Calculator.app", 8.1 MB, with cairo and the 15 libraries it needs inside, so it runs on a Mac without Homebrew. English and Hebrew, with an icon. Apple silicon only, and signed ad hoc (not yet notarized), so the first open on another Mac goes through "Open anyway".
+**A Mac application:** the calculator builds into "Eiffel Graphing Calculator.app", 8.1 MB, with cairo and the 15 libraries it needs inside, so it runs on a Mac without Homebrew. English and Hebrew, with an icon. Apple silicon only, and signed ad hoc; it is not notarized, by design: anyone else builds the libraries and the app from source on their own Mac.
 
 **The drawn toolkit off Windows:** [simple_shell](https://github.com/simple-eiffel/simple_shell), the platform layer under simple_widgets, now has an AppKit half that keeps the Windows contract (the same events, device pixels, a cairo image for the window). So simple_widgets applications run on the Mac unchanged: 678 of simple_widgets' 685 tests pass there, and the 7GUIs app runs. simple_shell's GTK half, which brings simple_widgets to Linux, is next.
 
