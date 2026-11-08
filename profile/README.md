@@ -19,7 +19,7 @@ The simple_* libraries now build and pass their tests on **Linux and macOS**, no
 | Platform | Libraries that build and pass all their tests |
 |---|---|
 | Windows 11 (x86-64) | the home platform: every library reviewed in the port passes |
-| Linux (Ubuntu 24.04, x86-64) | 121 of 127 |
+| Linux (Ubuntu 24.04 under WSL, x86-64) | 121 of 127 |
 | macOS (Apple silicon, M4) | 120 of 127 |
 
 **How it was checked:** every library was built from source with EiffelStudio 25.02, with contracts kept on, and its whole test suite was run on real machines. A build alone did not count as a pass. Counts leave out the Windows-only libraries below and four that need outside services to test (Docker, Kubernetes, a GitHub runner, a real installer). simple_postgres counts with a live PostgreSQL server.
@@ -258,6 +258,7 @@ almost entirely from ecosystem parts:
    ```bash
    export ISE_EIFFEL=/opt/homebrew/opt/eiffelstudio
    export ISE_PLATFORM=macosx-x86-64
+   export ISE_LIBRARY="$ISE_EIFFEL"
    export SIMPLE_EIFFEL=~/path/to/simple_eiffel
    export PATH="$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin:$PATH"
    ```
@@ -271,13 +272,14 @@ almost entirely from ecosystem parts:
    ```bash
    export ISE_EIFFEL=~/Eiffel_25.02
    export ISE_PLATFORM=linux-x86-64
+   export ISE_LIBRARY="$ISE_EIFFEL"
    export SIMPLE_EIFFEL=~/path/to/simple_eiffel
    export PATH="$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin:$PATH"
    ```
 3. Install a C compiler and the development packages a library links, for example `sudo apt install build-essential pkg-config libssl-dev libcairo2-dev`.
 4. Add it to your ECF exactly as on Windows.
 
-**On macOS and Linux, a few libraries build a small C object of their own once after cloning:** run `make -C Clib` in eiffel_sqlite_2025, simple_env, simple_ipc, simple_mmap, simple_system, simple_watcher and simple_vulkan, and `make -C c_lib` in simple_archive.
+**On macOS and Linux, a few libraries build a small C object of their own once after cloning:** run `make -C Clib` in eiffel_sqlite_2025, simple_env, simple_ipc, simple_mmap, simple_system, simple_watcher, simple_vulkan and simple_speech, and `make -C c_lib` in simple_archive. simple_speech also needs whisper.cpp (`brew install whisper-cpp` on macOS; build whisper.cpp 1.9.5 from source on Ubuntu) and `SHERPA_ONNX_DIR` pointing at sherpa-onnx 1.12.20's shared release for your platform.
 
 ### Package Manager
 
