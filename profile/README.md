@@ -7,7 +7,7 @@
 **142 Eiffel libraries and applications for modern software development, on Windows, Linux and macOS**
 
 [![Libraries](https://img.shields.io/badge/libraries-142-blue)](https://github.com/simple-eiffel)
-![Windows: tests pass](https://img.shields.io/badge/Windows-tests%20pass-0078D6?logo=windows&logoColor=white) ![Linux: 121 of 127 pass](https://img.shields.io/badge/Linux-121%20of%20127%20pass-FCC624?logo=linux&logoColor=black) ![macOS: 120 of 127 pass](https://img.shields.io/badge/macOS-120%20of%20127%20pass-000000?logo=apple&logoColor=white)
+![Windows: tests pass](https://img.shields.io/badge/Windows-tests%20pass-0078D6?logo=windows&logoColor=white) ![Linux: 122 of 127 pass](https://img.shields.io/badge/Linux-122%20of%20127%20pass-FCC624?logo=linux&logoColor=black) ![macOS: 121 of 127 pass](https://img.shields.io/badge/macOS-121%20of%20127%20pass-000000?logo=apple&logoColor=white)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Eiffel](https://img.shields.io/badge/Eiffel-25.02-orange)](https://www.eiffel.org/)
 
@@ -20,12 +20,12 @@ The simple_* libraries now build and pass their tests on **Linux and macOS**, no
 | Platform | Libraries that build and pass all their tests |
 |---|---|
 | Windows 11 (x86-64) | the home platform: every library reviewed in the port passes |
-| Linux (Ubuntu 24.04 under WSL, x86-64) | 121 of 127 |
-| macOS (Apple silicon, M4) | 120 of 127 |
+| Linux (Ubuntu 24.04 under WSL, x86-64) | 122 of 127 |
+| macOS (Apple silicon, M4) | 121 of 127 |
 
 **How it was checked:** every library was built from source with EiffelStudio 25.02, with contracts kept on, and its whole test suite was run on real machines. A build alone did not count as a pass. Counts leave out the Windows-only libraries below and four that need outside services to test (Docker, Kubernetes, a GitHub runner, a real installer). simple_postgres counts with a live PostgreSQL server.
 
-**Still in progress:** the native GUI libraries, simple_shell, simple_widgets, simple_browser and simple_narrate, and the text shaper simple_shaping. They are getting native backends: GTK on Linux and AppKit on macOS. Also: one simple_vision test (a tree-widget selection under EiffelVision2's GTK) fails on Linux and macOS, and simple_postgres's macOS port is still in review.
+**Still in progress:** the native GUI libraries, simple_shell, simple_widgets, simple_browser and simple_narrate. They are getting native backends: GTK on Linux and AppKit on macOS. Also: one simple_vision test (a tree-widget selection under EiffelVision2's GTK) fails on Linux and macOS, and simple_postgres's macOS port is still in review.
 
 **Windows only, by design:**
 - simple_bible, simple_reel, simple_prompter and simple_ocr_capture are applications built around Windows.
@@ -61,7 +61,7 @@ The simple_* libraries now build and pass their tests on **Linux and macOS**, no
 ### Desktop GUI (Windows; Linux and macOS in progress)
 - **simple_widgets** - a drawn widget toolkit above simple_cairo: themed and contract-checked
 - **simple_shell** - the platform shell: window and message pump, clipboard, keys, speller, desktop grab
-- **simple_shaping** - text shaping: bidi, itemization, glyph shaping and font fallback
+- **simple_shaping** - text shaping: bidi, itemization, glyph shaping and font fallback (Windows, Linux and macOS)
 
 ### Applications
 - **simple_speed_reader** - an RSVP speed reader with a comprehension-recovery loop
