@@ -12,6 +12,32 @@
 
 ---
 
+## What's New (November 2026): Linux and macOS
+
+The simple_* libraries now build and pass their tests on **Linux and macOS**, not only Windows.
+
+| Platform | Libraries that build and pass all their tests |
+|---|---|
+| Windows 11 (x86-64) | the home platform: every library reviewed in the port passes |
+| Linux (Ubuntu 24.04, x86-64) | 121 of 127 |
+| macOS (Apple silicon, M4) | 120 of 127 |
+
+**How it was checked:** every library was built from source with EiffelStudio 25.02, with contracts kept on, and its whole test suite was run on real machines. A build alone did not count as a pass. Counts leave out the Windows-only libraries below and four that need outside services to test (Docker, Kubernetes, a GitHub runner, a real installer). simple_postgres counts with a live PostgreSQL server.
+
+**Still in progress:** the native GUI libraries, simple_shell, simple_widgets, simple_browser and simple_narrate, and the text shaper simple_shaping. They are getting native backends: GTK on Linux and AppKit on macOS. Also: one simple_vision test (a tree-widget selection under EiffelVision2's GTK) fails on Linux and macOS, and simple_postgres's macOS port is still in review.
+
+**Windows only, by design:**
+- simple_bible, simple_reel, simple_prompter and simple_ocr_capture are applications built around Windows.
+- simple_registry wraps the Windows registry.
+- simple_taskman reads Windows process and performance data.
+
+**Found and fixed along the way:**
+- **Security:** simple_email now encrypts with TLS on every platform, checked against a real mail server, and simple_smtp sends through it. simple_grpc's `set_tls` now refuses to call a plain connection "https".
+- **Hidden failures:** simple_process's other result names (`exit_code`, `succeeded` and the rest) reported fixed values, so callers in several libraries could not see a failed program. A program that cannot start now reports exit code 127, the POSIX shell's code.
+- **Speed, found by measuring:** contracts that rebuilt whole models on every call made some operations far slower than they should be. simple_diff's worst case went from 419 seconds to 11; marking 2,000 spans in simple_widgets from 102 seconds to under one; and a simple_sql fix now in review takes filling a vector of 1,000 values from 51 seconds to under one.
+
+---
+
 ## What's New (January 2026) — 29 libraries
 
 ### Template & Code Generation
