@@ -13,6 +13,29 @@
 
 ---
 
+## What's New (November 2026): one GUI program, three platforms
+
+**[simple_gui](https://github.com/simple-eiffel/simple_gui)** is a GUI API for Eiffel: write the program once, and it is GTK 4 on Linux, AppKit on macOS, and [simple_widgets](https://github.com/simple-eiffel/simple_widgets) (the drawn Cairo look) on Windows. On Linux and macOS every control is the platform's own; nothing is drawn to imitate it.
+
+**[simple_graph_calc](https://github.com/simple-eiffel/simple_graph_calc)**, a scientific graphing calculator, is the proof: one program, unchanged, on all three.
+
+| | Linux (GTK 4) | macOS (AppKit) | Windows (simple_widgets) |
+|---|---|---|---|
+| simple_gui's shared test suite | 32 of 32 | 32 of 32 | 32 of 32 |
+| The calculator's own tests | 19 of 19 | 19 of 19 | 19 of 19 |
+| Dark, two functions | ![Linux](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/linux/gallery_4_dark.png) | ![macOS](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/macos/gallery_4_dark.png) | ![Windows](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/windows/gallery_4_dark.png) |
+| Hebrew interface, mirrored | ![Linux](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/linux/gallery_5_hebrew.png) | ![macOS](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/macos/gallery_5_hebrew.png) | ![Windows](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/windows/gallery_5_hebrew.png) |
+
+**Controls in simple_gui 0.2:** windows, menus and context menus, labels, buttons, check boxes, text fields and areas, lists, sortable multi-select tables, trees, tabs, splitters, grids and stacks, a Cairo canvas at the screen's scale, file and message dialogs. Light and dark follow the system, any window can turn right to left, every control is accessible, and a test driver clicks, types and takes pictures as a user would. GUI work runs on SCOOP: workers never call into the GUI, they post to its mailbox.
+
+**A Mac application:** the calculator builds into "Eiffel Graphing Calculator.app", 8.1 MB, with cairo and the 15 libraries it needs inside, so it runs on a Mac without Homebrew. English and Hebrew, with an icon. Apple silicon only, and signed ad hoc (not yet notarized), so the first open on another Mac goes through "Open anyway".
+
+**The drawn toolkit off Windows:** [simple_shell](https://github.com/simple-eiffel/simple_shell), the platform layer under simple_widgets, now has an AppKit half that keeps the Windows contract (the same events, device pixels, a cairo image for the window). So simple_widgets applications run on the Mac unchanged: 671 of simple_widgets' 678 tests pass there, and the 7GUIs app runs. simple_shell's GTK half, which brings simple_widgets to Linux, is next.
+
+**Not yet:** on Windows, right to left does not yet mirror the menu bar, tabs and table columns, and windows do not grow to fit their content; on the Mac, VoiceOver does not yet read simple_widgets' drawn controls; printing and spelling are Windows only; simple_browser has not been started.
+
+---
+
 ## What's New (November 2026): Linux and macOS
 
 The simple_* libraries now build and pass their tests on **Linux and macOS**, not only Windows.
@@ -25,7 +48,7 @@ The simple_* libraries now build and pass their tests on **Linux and macOS**, no
 
 **How it was checked:** every library was built from source with EiffelStudio 25.02, with contracts kept on, and its whole test suite was run on real machines. A build alone did not count as a pass. Counts leave out the Windows-only libraries below and four that need outside services to test (Docker, Kubernetes, a GitHub runner, a real installer). simple_postgres counts with a live PostgreSQL server.
 
-**Still in progress:** the native GUI libraries, simple_shell, simple_widgets, simple_browser and simple_narrate. They are getting native backends: GTK on Linux and AppKit on macOS. Also: one simple_vision test (a tree-widget selection under EiffelVision2's GTK) fails on Linux and macOS, and simple_postgres's macOS port is still in review.
+**Still in progress:** the GUI libraries (see above): simple_gui runs on all three; simple_shell and simple_widgets run on Windows and macOS, with Linux next; simple_narrate's Studio passes on the Mac with a fix in review; simple_browser is not started. Also: one simple_vision test (a tree-widget selection under EiffelVision2's GTK) fails on Linux and macOS, and simple_postgres's macOS port is still in review.
 
 **Windows only, by design:**
 - simple_bible, simple_reel, simple_prompter and simple_ocr_capture are applications built around Windows.
@@ -58,7 +81,7 @@ The simple_* libraries now build and pass their tests on **Linux and macOS**, no
 - **simple_winhttp** - HTTPS client for Windows, Linux and macOS: synchronous exchanges, failures as results
 - **simple_voice** - voice synthesis and cloning with Qwen 3 TTS
 
-### Desktop GUI (Windows; Linux and macOS in progress)
+### Desktop GUI (Windows and macOS; Linux next)
 - **simple_widgets** - a drawn widget toolkit above simple_cairo: themed and contract-checked
 - **simple_shell** - the platform shell: window and message pump, clipboard, keys, speller, desktop grab
 - **simple_shaping** - text shaping: bidi, itemization, glyph shaping and font fallback (Windows, Linux and macOS)
