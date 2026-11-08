@@ -251,6 +251,34 @@ almost entirely from ecosystem parts:
    <library name="simple_json" location="$SIMPLE_EIFFEL/simple_json/simple_json.ecf"/>
    ```
 
+### macOS (Apple silicon)
+
+1. Install EiffelStudio: `brew install eiffelstudio`
+2. Set the environment (for example in `~/.zprofile`). `macosx-x86-64` is EiffelStudio's platform name, even on Apple silicon:
+   ```bash
+   export ISE_EIFFEL=/opt/homebrew/opt/eiffelstudio
+   export ISE_PLATFORM=macosx-x86-64
+   export SIMPLE_EIFFEL=~/path/to/simple_eiffel
+   export PATH="$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin:$PATH"
+   ```
+3. Install the C libraries a library links with Homebrew, for example `brew install openssl@3 cairo`.
+4. Add it to your ECF exactly as on Windows.
+
+### Linux (Ubuntu 24.04)
+
+1. Download EiffelStudio 25.02 for Linux from [eiffel.org](https://www.eiffel.org/downloads) and unpack it.
+2. Set the environment (for example in `~/.bashrc`):
+   ```bash
+   export ISE_EIFFEL=~/Eiffel_25.02
+   export ISE_PLATFORM=linux-x86-64
+   export SIMPLE_EIFFEL=~/path/to/simple_eiffel
+   export PATH="$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin:$PATH"
+   ```
+3. Install a C compiler and the development packages a library links, for example `sudo apt install build-essential pkg-config libssl-dev libcairo2-dev`.
+4. Add it to your ECF exactly as on Windows.
+
+**On macOS and Linux, a few libraries build a small C object of their own once after cloning:** run `make -C Clib` in eiffel_sqlite_2025, simple_env, simple_ipc, simple_mmap, simple_system, simple_watcher and simple_vulkan, and `make -C c_lib` in simple_archive.
+
 ### Package Manager
 
 ```bash
