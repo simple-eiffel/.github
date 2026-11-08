@@ -35,7 +35,7 @@ The simple_* libraries now build and pass their tests on **Linux and macOS**, no
 **Found and fixed along the way:**
 - **Security:** simple_email now encrypts with TLS on every platform, checked against a real mail server, and simple_smtp sends through it. simple_grpc's `set_tls` now refuses to call a plain connection "https".
 - **Hidden failures:** simple_process's other result names (`exit_code`, `succeeded` and the rest) reported fixed values, so callers in several libraries could not see a failed program. A program that cannot start now reports exit code 127, the POSIX shell's code.
-- **Speed, found by measuring:** contracts that rebuilt whole models on every call made some operations far slower than they should be. simple_diff's worst case went from 419 seconds to 11; marking 2,000 spans in simple_widgets from 102 seconds to under one; and a simple_sql fix now in review takes filling a vector of 1,000 values from 51 seconds to under one.
+- **Speed, found by measuring:** contracts that rebuilt whole models on every call made some operations far slower than they should be. simple_diff's worst case went from 419 seconds to 11; marking 2,000 spans in simple_widgets from 102 seconds to under one; and filling a simple_sql vector of 1,000 values from 51 seconds to under one.
 
 ---
 
