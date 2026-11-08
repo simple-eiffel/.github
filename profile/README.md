@@ -21,18 +21,18 @@
 
 | | Linux (GTK 4) | macOS (AppKit) | Windows (simple_widgets) |
 |---|---|---|---|
-| simple_gui's shared test suite | 32 of 32 | 32 of 32 | 32 of 32 |
+| simple_gui's shared test suite | 40 of 40 | 40 of 40 | 40 of 40 |
 | The calculator's own tests | 19 of 19 | 19 of 19 | 19 of 19 |
 | Dark, two functions | ![Linux](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/linux/gallery_4_dark.png) | ![macOS](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/macos/gallery_4_dark.png) | ![Windows](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/windows/gallery_4_dark.png) |
 | Hebrew interface, mirrored | ![Linux](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/linux/gallery_5_hebrew.png) | ![macOS](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/macos/gallery_5_hebrew.png) | ![Windows](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/windows/gallery_5_hebrew.png) |
 
-**Controls in simple_gui 0.2:** windows, menus and context menus, labels, buttons, check boxes, text fields and areas, lists, sortable multi-select tables, trees, tabs, splitters, grids and stacks, a Cairo canvas at the screen's scale, file and message dialogs. Light and dark follow the system, any window can turn right to left, every control is accessible, and a test driver clicks, types and takes pictures as a user would. GUI work runs on SCOOP: workers never call into the GUI, they post to its mailbox.
+**Controls in simple_gui:** windows, menus and context menus, labels, buttons, check boxes, text fields and areas, lists, sortable multi-select tables (lazy if you like: rows are asked for only as they come into view, with an optional session cache, kept in a scratch file or SQLite, and optionally encrypted), trees, tabs, splitters, grids and stacks, a Cairo canvas at the screen's scale, file and message dialogs. Light and dark follow the system, any window can turn right to left, every control is accessible, and a test driver clicks, types and takes pictures as a user would. GUI work runs on SCOOP: workers never call into the GUI, they post to its mailbox.
 
 **A Mac application:** the calculator builds into "Eiffel Graphing Calculator.app", 8.1 MB, with cairo and the 15 libraries it needs inside, so it runs on a Mac without Homebrew. English and Hebrew, with an icon. Apple silicon only, and signed ad hoc; it is not notarized, by design: anyone else builds the libraries and the app from source on their own Mac.
 
-**The drawn toolkit off Windows:** [simple_shell](https://github.com/simple-eiffel/simple_shell), the platform layer under simple_widgets, now has an AppKit half that keeps the Windows contract (the same events, device pixels, a cairo image for the window). So simple_widgets applications run on the Mac unchanged: 678 of simple_widgets' 685 tests pass there, and the 7GUIs app runs. simple_shell's GTK half, which brings simple_widgets to Linux, is next.
+**The drawn toolkit off Windows:** [simple_shell](https://github.com/simple-eiffel/simple_shell), the platform layer under simple_widgets, now has an AppKit half that keeps the Windows contract (the same events, device pixels, a cairo image for the window). Its GTK 4 half does the same on Linux. So simple_widgets applications run unchanged on all three: of simple_widgets' 695 tests, Windows passes 695, macOS 691 and Linux 687 (the gaps are Windows drive letters, screen readers, Wayland's screen grab and three Linux text tests being looked at), and the 7GUIs app runs.
 
-**Not yet:** on Windows, right to left does not yet mirror the menu bar, tabs and table columns, and windows do not grow to fit their content; on the Mac, VoiceOver does not yet read simple_widgets' drawn controls; printing and spelling are Windows only; simple_browser has not been started.
+**Not yet:** screen readers for simple_widgets' drawn controls off Windows (VoiceOver, Orca), which come last; on Linux, printing, spelling and the tray; simple_browser has not been started off Windows.
 
 ---
 
@@ -48,7 +48,7 @@ The simple_* libraries now build and pass their tests on **Linux and macOS**, no
 
 **How it was checked:** every library was built from source with EiffelStudio 25.02, with contracts kept on, and its whole test suite was run on real machines. A build alone did not count as a pass. Counts leave out the Windows-only libraries below and four that need outside services to test (Docker, Kubernetes, a GitHub runner, a real installer). simple_postgres counts with a live PostgreSQL server.
 
-**Still in progress:** the GUI libraries (see above): simple_gui runs on all three; simple_shell and simple_widgets run on Windows and macOS, with Linux next; simple_narrate's Studio passes on the Mac with a fix in review; simple_browser is not started. Also: one simple_vision test (a tree-widget selection under EiffelVision2's GTK) fails on Linux and macOS, and simple_postgres's macOS port is still in review.
+**Still in progress:** the GUI libraries (see above): simple_gui runs on all three; simple_shell and simple_widgets run on all three; simple_narrate's Studio passes on the Mac with a fix in review; simple_browser is not started. Also: one simple_vision test (a tree-widget selection under EiffelVision2's GTK) fails on Linux and macOS, and simple_postgres's macOS port is still in review.
 
 **Windows only, by design:**
 - simple_bible, simple_reel, simple_prompter and simple_ocr_capture are applications built around Windows.
@@ -81,7 +81,7 @@ The simple_* libraries now build and pass their tests on **Linux and macOS**, no
 - **simple_winhttp** - HTTPS client for Windows, Linux and macOS: synchronous exchanges, failures as results
 - **simple_voice** - voice synthesis and cloning with Qwen 3 TTS
 
-### Desktop GUI (Windows and macOS; Linux next)
+### Desktop GUI (Windows, Linux and macOS)
 - **simple_widgets** - a drawn widget toolkit above simple_cairo: themed and contract-checked
 - **simple_shell** - the platform shell: window and message pump, clipboard, keys, speller, desktop grab
 - **simple_shaping** - text shaping: bidi, itemization, glyph shaping and font fallback (Windows, Linux and macOS)
