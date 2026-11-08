@@ -30,7 +30,7 @@
 
 **A Mac application:** the calculator builds into "Eiffel Graphing Calculator.app", 8.1 MB, with cairo and the 15 libraries it needs inside, so it runs on a Mac without Homebrew. English and Hebrew, with an icon. Apple silicon only, and signed ad hoc (not yet notarized), so the first open on another Mac goes through "Open anyway".
 
-**The drawn toolkit off Windows:** [simple_shell](https://github.com/simple-eiffel/simple_shell), the platform layer under simple_widgets, now has an AppKit half that keeps the Windows contract (the same events, device pixels, a cairo image for the window). So simple_widgets applications run on the Mac unchanged: 671 of simple_widgets' 678 tests pass there, and the 7GUIs app runs. simple_shell's GTK half, which brings simple_widgets to Linux, is next.
+**The drawn toolkit off Windows:** [simple_shell](https://github.com/simple-eiffel/simple_shell), the platform layer under simple_widgets, now has an AppKit half that keeps the Windows contract (the same events, device pixels, a cairo image for the window). So simple_widgets applications run on the Mac unchanged: 677 of simple_widgets' 685 tests pass there, and the 7GUIs app runs. simple_shell's GTK half, which brings simple_widgets to Linux, is next.
 
 **Not yet:** on Windows, right to left does not yet mirror the menu bar, tabs and table columns, and windows do not grow to fit their content; on the Mac, VoiceOver does not yet read simple_widgets' drawn controls; printing and spelling are Windows only; simple_browser has not been started.
 
