@@ -4,9 +4,10 @@
 
 # Simple Eiffel
 
-**121 production-ready Eiffel libraries for modern software development**
+**142 Eiffel libraries and applications for modern software development, on Windows, Linux and macOS**
 
-[![Libraries](https://img.shields.io/badge/libraries-121-blue)](https://github.com/simple-eiffel)
+[![Libraries](https://img.shields.io/badge/libraries-142-blue)](https://github.com/simple-eiffel)
+![Windows: tests pass](https://img.shields.io/badge/Windows-tests%20pass-0078D6?logo=windows&logoColor=white) ![Linux: 121 of 127 pass](https://img.shields.io/badge/Linux-121%20of%20127%20pass-FCC624?logo=linux&logoColor=black) ![macOS: 120 of 127 pass](https://img.shields.io/badge/macOS-120%20of%20127%20pass-000000?logo=apple&logoColor=white)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Eiffel](https://img.shields.io/badge/Eiffel-25.02-orange)](https://www.eiffel.org/)
 
@@ -35,6 +36,49 @@ The simple_* libraries now build and pass their tests on **Linux and macOS**, no
 - **Security:** simple_email now encrypts with TLS on every platform, checked against a real mail server, and simple_smtp sends through it. simple_grpc's `set_tls` now refuses to call a plain connection "https".
 - **Hidden failures:** simple_process's other result names (`exit_code`, `succeeded` and the rest) reported fixed values, so callers in several libraries could not see a failed program. A program that cannot start now reports exit code 127, the POSIX shell's code.
 - **Speed, found by measuring:** contracts that rebuilt whole models on every call made some operations far slower than they should be. simple_diff's worst case went from 419 seconds to 11; marking 2,000 spans in simple_widgets from 102 seconds to under one; and a simple_sql fix now in review takes filling a vector of 1,000 values from 51 seconds to under one.
+
+---
+
+## What's New (February to October 2026): 25 libraries and applications
+
+### Reasoning and developer tools
+- **simple_smt** - native binding to the Z3 SMT solver: build formulas, decide satisfiability, extract models, prove theorems
+- **simple_autospec** - hardens specifications with Z3-backed feasibility, vacuity and subsumption checks
+- **simple_graphify** - knowledge graphs for Eiffel projects, with deterministic extraction
+- **simple_bnf** - the ECMA-367 grammar of Eiffel as objects: 224 BNF-E production factories
+
+### Images, documents and machine learning
+- **simple_image** - image editing: RGBA images and masks, C kernels under contracts, cairo drawing
+- **simple_image_ai** - AI helpers for simple_image on simple_onnx, such as person cutout
+- **simple_tensor** - tensors, autograd and optimizers with CPU and Vulkan GPU backends
+- **simple_document** - a rich document model: Unicode text blocks with inline styles and links
+
+### Data, networking and speech
+- **simple_warp** - event-driven data integration
+- **simple_winhttp** - HTTPS client for Windows, Linux and macOS: synchronous exchanges, failures as results
+- **simple_voice** - voice synthesis and cloning with Qwen 3 TTS
+
+### Desktop GUI (Windows; Linux and macOS in progress)
+- **simple_widgets** - a drawn widget toolkit above simple_cairo: themed and contract-checked
+- **simple_shell** - the platform shell: window and message pump, clipboard, keys, speller, desktop grab
+- **simple_shaping** - text shaping: bidi, itemization, glyph shaping and font fallback
+
+### Applications
+- **simple_speed_reader** - an RSVP speed reader with a comprehension-recovery loop
+- **simple_narrate** - essay to narrated audio, entirely on your own machine
+- **simple_bible** *(Windows)* - a free Bible-study workbench: Hebrew, Greek and English, every fact sourced
+- **simple_reel** *(Windows)* - chapter-to-video render orchestrator over ComfyUI, ffmpeg, Manim and Blender
+- **simple_prompter** *(Windows)* - a voice-following teleprompter and take studio
+- **simple_taskman** *(Windows)* - a diagnostic task manager that names the cause of a slowdown
+- **simple_ocr_capture** *(Windows)* - screen-region OCR capture with local vision models
+
+### Eiffel on Android
+- **simple_eif_phone** - write an Android app in Eiffel and get a signed APK from one command
+- **simple_phone_calc** - a calculator for Android in Eiffel, with a step-by-step guide
+- **sb_phone_eiffel** - SB Phone, the offline Bible-study app for Android, rebuilt in Eiffel
+- **sb_phone** - the original SB Phone app, in Kotlin
+
+**Design records, no code yet:** simple_dot, simple_langchain, simple_loop, simple_observability, simple_playwright and simple_tasks hold research and specifications for libraries not yet built.
 
 ---
 
