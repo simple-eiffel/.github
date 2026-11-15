@@ -21,18 +21,20 @@
 
 | | Linux (GTK 4) | macOS (AppKit) | Windows (simple_widgets) |
 |---|---|---|---|
-| simple_gui's shared test suite | 40 of 40 | 40 of 40 | 40 of 40 |
+| simple_gui's shared test suite (Nov 15) | 240 of 240 | 240 of 240 | 240 of 240 |
 | The calculator's own tests | 19 of 19 | 19 of 19 | 19 of 19 |
 | Dark, two functions | ![Linux](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/linux/gallery_4_dark.png) | ![macOS](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/macos/gallery_4_dark.png) | ![Windows](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/windows/gallery_4_dark.png) |
 | Hebrew interface, mirrored | ![Linux](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/linux/gallery_5_hebrew.png) | ![macOS](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/macos/gallery_5_hebrew.png) | ![Windows](https://raw.githubusercontent.com/simple-eiffel/simple_graph_calc/main/docs/gallery/windows/gallery_5_hebrew.png) |
 
-**Controls in simple_gui:** windows, menus and context menus, labels, buttons, check boxes, text fields and areas, lists, sortable multi-select tables (lazy if you like: rows are asked for only as they come into view, with an optional session cache, kept in a scratch file or SQLite, and optionally encrypted), trees, tabs, splitters, grids and stacks, a Cairo canvas at the screen's scale, file and message dialogs. Light and dark follow the system, any window can turn right to left, every control is accessible, and a test driver clicks, types and takes pictures as a user would. GUI work runs on SCOOP: workers never call into the GUI, they post to its mailbox.
+**Controls in simple_gui:** windows, menus and context menus, labels, buttons, check boxes, text fields and areas, lists, sortable multi-select tables (lazy if you like: rows are asked for only as they come into view, with an optional session cache, kept in a scratch file or SQLite, and optionally encrypted), trees, tabs, splitters, grids and stacks, a Cairo canvas at the screen's scale, file and message dialogs. Since then: docking panes; editable table cells with validation; navigation (sidebar, wizard, pagination, breadcrumbs); custom dialogs; a grid view, a code editor, a print dialog and preferences; per-widget styling and theming; animation (fades, page transitions, smooth scrolling); adaptive layout (breakpoints, flow boxes, columns, overlays, sticky headers); images (a zoom-and-pan viewer, a lens, a before-and-after compare, a lightbox, effects); app services (open a URL or file, reveal a file, network status, monitors); locale formatting of numbers, dates and money, the same on every platform; loading placeholders; and app and window icons. A media player (Media Foundation, GTK and AVKit) passes on all three and merges next. Light and dark follow the system, any window can turn right to left, every control is accessible, and a test driver clicks, types and takes pictures as a user would. GUI work runs on SCOOP: workers never call into the GUI, they post to its mailbox.
 
 **A Mac application:** the calculator builds into "Eiffel Graphing Calculator.app", 8.1 MB, with cairo and the 15 libraries it needs inside, so it runs on a Mac without Homebrew. English and Hebrew, with an icon. Apple silicon only, and signed ad hoc; it is not notarized, by design: anyone else builds the libraries and the app from source on their own Mac.
 
-**The drawn toolkit off Windows:** [simple_shell](https://github.com/simple-eiffel/simple_shell), the platform layer under simple_widgets, now has an AppKit half that keeps the Windows contract (the same events, device pixels, a cairo image for the window). Its GTK 4 half does the same on Linux. So simple_widgets applications run unchanged on all three: of simple_widgets' 695 tests, Windows passes 695, macOS 691 and Linux 687 (the gaps are Windows drive letters, screen readers, Wayland's screen grab and three Linux text tests being looked at), and the 7GUIs app runs.
+**The drawn toolkit off Windows:** [simple_shell](https://github.com/simple-eiffel/simple_shell), the platform layer under simple_widgets, now has an AppKit half that keeps the Windows contract (the same events, device pixels, a cairo image for the window). Its GTK 4 half does the same on Linux. So simple_widgets applications run unchanged on all three: all 832 of simple_widgets' tests pass on Windows, Linux and macOS (Nov 14), and the 7GUIs app runs.
 
-**Not yet:** screen readers for simple_widgets' drawn controls off Windows (VoiceOver, Orca), which come last; on Linux, printing, spelling and the tray; simple_browser has not been started off Windows.
+**The web view off Windows:** [simple_browser](https://github.com/simple-eiffel/simple_browser) 0.2.0 runs on Linux (WebKitGTK 6) and macOS (WKWebView) as well as Windows, with a shared event loop.
+
+**Not yet:** screen readers off Windows (VoiceOver, Orca), which come last; on Linux, printing, spelling and the tray, checked so far only where WSL can host them; a simple_gui widget for the web view.
 
 ---
 
@@ -48,7 +50,7 @@ The simple_* libraries now build and pass their tests on **Linux and macOS**, no
 
 **How it was checked:** every library was built from source with EiffelStudio 25.02, with contracts kept on, and its whole test suite was run on real machines. A build alone did not count as a pass. Counts leave out the Windows-only libraries below and four that need outside services to test (Docker, Kubernetes, a GitHub runner, a real installer). simple_postgres counts with a live PostgreSQL server.
 
-**Still in progress:** the GUI libraries (see above): simple_gui runs on all three; simple_shell and simple_widgets run on all three; simple_narrate's Studio passes on the Mac with a fix in review; simple_browser is not started. Also: one simple_vision test (a tree-widget selection under EiffelVision2's GTK) fails on Linux and macOS, and simple_postgres's macOS port is still in review.
+**Still in progress:** simple_narrate's Studio passes on the Mac with a fix in review. simple_gui, simple_shell, simple_widgets and simple_browser run on all three (see above). simple_vision is retired; its users moved to simple_gui. simple_postgres builds on all three and has passed against a live server on each.
 
 **Windows only, by design:**
 - simple_bible, simple_reel, simple_prompter and simple_ocr_capture are applications built around Windows.
@@ -58,6 +60,8 @@ The simple_* libraries now build and pass their tests on **Linux and macOS**, no
 **Found and fixed along the way:**
 - **Security:** simple_email now encrypts with TLS on every platform, checked against a real mail server, and simple_smtp sends through it. simple_grpc's `set_tls` now refuses to call a plain connection "https".
 - **Hidden failures:** simple_process's other result names (`exit_code`, `succeeded` and the rest) reported fixed values, so callers in several libraries could not see a failed program. A program that cannot start now reports exit code 127, the POSIX shell's code.
+- **Tests that never ran:** an audit of the test runners found tests no gate called. simple_sql now runs all 425 of its tests in the gate (83 before), plus its five example applications, and all pass on Windows, Linux and macOS. Fixes for thirteen more libraries, which make them run the tests they had skipped, pass on macOS and are going through their Windows and Linux runs; running those tests found a real macOS bug in simple_notebook and two tests that rewrote committed files, fixed in the same changes.
+- **Gobo 26.10.18:** simple_gobo is on the current Gobo release; its seven consumers pass on all three platforms.
 - **Speed, found by measuring:** contracts that rebuilt whole models on every call made some operations far slower than they should be. simple_diff's worst case went from 419 seconds to 11; marking 2,000 spans in simple_widgets from 102 seconds to under one; and filling a simple_sql vector of 1,000 values from 51 seconds to under one.
 
 ---
@@ -343,7 +347,7 @@ almost entirely from ecosystem parts:
    export SIMPLE_EIFFEL=~/path/to/simple_eiffel
    export PATH="$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin:$PATH"
    ```
-3. Install a C compiler and the development packages a library links, for example `sudo apt install build-essential pkg-config libssl-dev libcairo2-dev`.
+3. Install a C compiler and the development packages a library links, for example `sudo apt install build-essential pkg-config libssl-dev libcairo2-dev`. For simple_gui: `libgtk-4-dev`, and for its media player `libgtk-4-media-gstreamer gstreamer1.0-libav`. For simple_browser: `libwebkitgtk-6.0-dev`.
 4. Add it to your ECF exactly as on Windows.
 
 **On macOS and Linux, a few libraries build a small C object of their own once after cloning:** run `make -C Clib` in eiffel_sqlite_2025, simple_env, simple_ipc, simple_mmap, simple_system, simple_watcher, simple_vulkan and simple_speech, and `make -C c_lib` in simple_archive. simple_speech also needs whisper.cpp (`brew install whisper-cpp` on macOS; build whisper.cpp 1.9.5 from source on Ubuntu) and `SHERPA_ONNX_DIR` pointing at sherpa-onnx 1.12.20's shared release for your platform.
